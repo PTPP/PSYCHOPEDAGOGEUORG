@@ -1,0 +1,126 @@
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-08T22:48:22.946Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.946Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.947Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:22.949Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:22.949Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:22.984Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.985Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.985Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:22.985Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:22.986Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:22.993Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.993Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.994Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:22.994Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:22.995Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:22.997Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.997Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:22.997Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:22.998Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:22.998Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.001Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.001Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.001Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:23.002Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:23.002Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-08T22:48:23.085Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.085Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.085Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:23.085Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:23.086Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.089Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.089Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.089Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:23.090Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:23.090Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.097Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.098Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.098Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:23.098Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:23.099Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.101Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.101Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.102Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:23.102Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:23.102Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.105Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.105Z] Checked if tokens are valid: false, expires at: 1759962361046
+[debug] [2025-10-08T22:48:23.105Z] > refreshing access token with scopes: []
+[debug] [2025-10-08T22:48:23.106Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-08T22:48:23.106Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.172Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.173Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.229Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2025-10-08T22:48:23.229Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.255Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.256Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.302Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-08T22:48:23.303Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.328Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.329Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.375Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ [none]
+[debug] [2025-10-08T22:48:23.376Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.379Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.379Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.414Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-10-08T22:48:23.414Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.421Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.423Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.453Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com [none]
+[debug] [2025-10-08T22:48:23.453Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.474Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.474Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.515Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com [none]
+[debug] [2025-10-08T22:48:23.515Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.548Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.549Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.591Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-08T22:48:23.591Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.624Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.625Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.664Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com [none]
+[debug] [2025-10-08T22:48:23.664Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.674Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.675Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.718Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ [none]
+[debug] [2025-10-08T22:48:23.718Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:23.737Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-08T22:48:23.738Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-08T22:48:23.779Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-10-08T22:48:23.779Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T22:48:24.369Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com 200
+[debug] [2025-10-08T22:48:24.374Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2025-10-08T22:48:24.496Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-08T22:48:24.498Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-08T22:48:24.582Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com 403
+[debug] [2025-10-08T22:48:24.583Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com [omitted]
+[debug] [2025-10-08T22:48:24.611Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-10-08T22:48:24.611Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-10-08T22:48:24.642Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com 403
+[debug] [2025-10-08T22:48:24.642Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseio.com [omitted]
+[debug] [2025-10-08T22:48:24.710Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-08T22:48:24.711Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-08T22:48:24.789Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com 200
+[debug] [2025-10-08T22:48:24.789Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebasecrashlytics.googleapis.com [omitted]
+[debug] [2025-10-08T22:48:24.834Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-10-08T22:48:24.835Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-10-08T22:48:24.910Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ 200
+[debug] [2025-10-08T22:48:24.910Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ [omitted]
+[debug] [2025-10-08T22:48:25.196Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ 200
+[debug] [2025-10-08T22:48:25.196Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atpp-rekrutacja-tpp/services/ [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-08T22:48:25.222Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-08T22:48:25.223Z] > authorizing via signed-in user (sdkk@psychopedagog.org)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-08T22:48:25.287Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-08T22:48:25.287Z] > authorizing via signed-in user (sdkk@psychopedagog.org)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-08T22:48:25.313Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-08T22:48:25.313Z] > authorizing via signed-in user (sdkk@psychopedagog.org)
