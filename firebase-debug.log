@@ -1,48 +1,77 @@
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-07T12:56:23.807Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-07T13:00:14.138Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-07T13:00:14.184Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-07T13:00:14.185Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-07T20:51:26.968Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-07T20:57:53.763Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2025-10-07T20:57:53.797Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2025-10-07T20:57:53.798Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-08T11:22:33.554Z] ----------------------------------------------------------------------
+[debug] [2025-10-08T11:22:33.557Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/0yk9nzw3ibqkjc4dy03f3v9nf5rxqylc-firebase-tools-14.18.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only firestore,storage
+[debug] [2025-10-08T11:22:33.557Z] CLI Version:   14.18.0
+[debug] [2025-10-08T11:22:33.558Z] Platform:      linux
+[debug] [2025-10-08T11:22:33.558Z] Node Version:  v20.19.1
+[debug] [2025-10-08T11:22:33.558Z] Time:          Wed Oct 08 2025 11:22:33 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-10-08T11:22:33.558Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-08T11:22:33.912Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:33.912Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:33.915Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/rekrutacja-tpp-45927009 [none]
+[debug] [2025-10-08T11:22:34.892Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/rekrutacja-tpp-45927009 200
+[debug] [2025-10-08T11:22:34.893Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/rekrutacja-tpp-45927009 {"workspaceId":"rekrutacja-tpp-45927009","name":"ATPP-Rekrutacja-TPP","workspaceRedirectUrl":"firebase-rekrutacja-tpp-1759841669507.cluster-bg6uurscprhn6qxr6xwtrhvkf6.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2025-10-08T10:24:02.014617Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","owner":"SELF","serviceAccountEmail":"msp-4716050665090313973@monospace-per-ws-sa-7.iam.gserviceaccount.com","enableNix":true,"ownerEmail":"sdkk@psychopedagog.org","workspaceImageUrl":"https://www.gstatic.com/monospace/231115/logo_angular.svg","templateArgs":"{\"__agentic_workspace\":true}","templateRepoUrl":"file:///usr/local/monospace/templates/public/angular","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2UtcmVrcnV0YWNqYS10cHAtMTc1OTg0MTY2OTUwNy5jbHVzdGVyLWJnNnV1cnNjcHJobjZxeHI2eHd0cmh2a2Y2LmNsb3Vkd29ya3N0YXRpb25zLmRldiIsImlhdCI6MTc1OTkyMjU1NCwiZXhwIjoxNzYwMDA4OTU0fQ.DxkOPe0pAibP_-td0vTWew6cM-2HSIKSvR3S5trDuk3bh3FdvZSmNATxkm5uDqWyBH_2RkbLkD-rDEJeM-F6bSmw89teFVtwRPs35ORbOSrgie8h8sn3KZVFHAawijBnu_0NONfxERSl4Z_SdWb-9tUE4AbGaMFwzTAHoxoBf2AUW29rDJWBC9YfykF3cyE72GzCohAJl3yATJcD245fRyTX9yL_4F7nRsW8wFdRfv1Ev2z5JFCLU5-rp5U9gOjOgkASSxOpRIiTr--uZkHupZNfZdXbaRHL04ZMxp7KfsgXvEzQlUrh5Hb5LIVyHh1LMV0822kswLtZPwKBpzLzGA","firebaseProjectId":"atpp-rekrutacja-tpp"}
+[debug] [2025-10-08T11:22:34.895Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-08T11:22:34.895Z] > authorizing via signed-in user (sdkk@psychopedagog.org)
+[debug] [2025-10-08T11:22:34.896Z] [iam] checking project atpp-rekrutacja-tpp for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-10-08T11:22:34.896Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:34.896Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:34.897Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/atpp-rekrutacja-tpp:testIamPermissions [none]
+[debug] [2025-10-08T11:22:34.897Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/atpp-rekrutacja-tpp:testIamPermissions x-goog-quota-user=projects/atpp-rekrutacja-tpp
+[debug] [2025-10-08T11:22:34.897Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atpp-rekrutacja-tpp:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-10-08T11:22:35.656Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/atpp-rekrutacja-tpp:testIamPermissions 200
+[debug] [2025-10-08T11:22:35.656Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atpp-rekrutacja-tpp:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[info] 
+[info] === Deploying to 'atpp-rekrutacja-tpp'...
+[info] 
+[info] i  deploying storage, firestore 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2025-10-08T11:22:35.663Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:35.663Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:35.663Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/atpp-rekrutacja-tpp/defaultBucket [none]
+[debug] [2025-10-08T11:22:37.089Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/atpp-rekrutacja-tpp/defaultBucket 200
+[debug] [2025-10-08T11:22:37.089Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/atpp-rekrutacja-tpp/defaultBucket {"name":"projects/atpp-rekrutacja-tpp/defaultBucket","location":"US-CENTRAL1","bucket":{"name":"projects/atpp-rekrutacja-tpp/buckets/atpp-rekrutacja-tpp.firebasestorage.app"},"storageClass":"REGIONAL"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2025-10-08T11:22:37.092Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:37.092Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:37.092Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test [none]
+[debug] [2025-10-08T11:22:37.092Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test [omitted]
+[debug] [2025-10-08T11:22:38.073Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test 200
+[debug] [2025-10-08T11:22:38.073Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test {}
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-10-08T11:22:38.078Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:38.079Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:38.079Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/atpp-rekrutacja-tpp/databases/(default) [none]
+[debug] [2025-10-08T11:22:39.737Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/atpp-rekrutacja-tpp/databases/(default) 200
+[debug] [2025-10-08T11:22:39.737Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/atpp-rekrutacja-tpp/databases/(default) {"name":"projects/atpp-rekrutacja-tpp/databases/(default)","uid":"e56d1bab-a1b5-4774-a0c8-335746a0fe61","createTime":"2025-10-07T22:54:29.348053Z","updateTime":"2025-10-07T22:54:29.348053Z","locationId":"eur3","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-10-08T10:22:39.600194Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"e","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_ENABLED","etag":"IL77/Le+lJADMNXF0ZqXk5AD"}
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2025-10-08T11:22:39.738Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:39.738Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:39.738Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test [none]
+[debug] [2025-10-08T11:22:39.738Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test [omitted]
+[debug] [2025-10-08T11:22:40.753Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test 200
+[debug] [2025-10-08T11:22:40.754Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2025-10-08T11:22:40.755Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:40.755Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:40.758Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/releases pageSize=10&pageToken=
+[debug] [2025-10-08T11:22:41.721Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/releases 200
+[debug] [2025-10-08T11:22:41.722Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/releases {"releases":[{"name":"projects/atpp-rekrutacja-tpp/releases/cloud.firestore","rulesetName":"projects/atpp-rekrutacja-tpp/rulesets/d9b3e51c-978a-4f7f-9aff-f112f464b450","createTime":"2025-10-07T22:54:42.167178Z","updateTime":"2025-10-07T22:55:04.853296Z"},{"name":"projects/atpp-rekrutacja-tpp/releases/firebase.storage/atpp-rekrutacja-tpp.firebasestorage.app","rulesetName":"projects/atpp-rekrutacja-tpp/rulesets/0345c9c7-2930-4c09-b1b1-48618db35269","createTime":"2025-10-08T11:22:27.450596Z","updateTime":"2025-10-08T11:22:27.450596Z"}]}
+[debug] [2025-10-08T11:22:41.747Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:41.747Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:41.747Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/rulesets/0345c9c7-2930-4c09-b1b1-48618db35269 [none]
+[debug] [2025-10-08T11:22:42.711Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/rulesets/0345c9c7-2930-4c09-b1b1-48618db35269 200
+[debug] [2025-10-08T11:22:42.711Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/rulesets/0345c9c7-2930-4c09-b1b1-48618db35269 [omitted]
+[info] i  storage: uploading rules storage.rules... 
+[debug] [2025-10-08T11:22:42.715Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:42.715Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:42.715Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/rulesets [none]
+[debug] [2025-10-08T11:22:42.715Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/rulesets [omitted]
+[debug] [2025-10-08T11:22:43.690Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/rulesets 200
+[debug] [2025-10-08T11:22:43.691Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/rulesets {"name":"projects/atpp-rekrutacja-tpp/rulesets/f9a2ff1d-f369-44ff-991d-c86d280a22d2","source":{"files":[{"content":"rules_version = '2';\n\nservice firebase.storage {\n  match /b/{bucket}/o {\n\n    // Dostęp do folderu z plikami CV (cv-files)\n    match /cv-files/{fileName} {\n      // ZEZWALAJ na utworzenie (zapis/upload) pliku przez każdego.\n      // Używamy tego do przesyłania CV z formularza.\n      allow create: if true;\n\n      // BLOKUJ odczyt, aktualizację i usuwanie dla wszystkich.\n      // Dostęp do plików będzie realizowany przez linki (download URLs),\n      // które mają własne, bezpieczne mechanizmy autoryzacji.\n      allow read, update, delete: if false;\n    }\n\n    // Dostęp do folderu z listami motywacyjnymi (lm-files)\n    match /lm-files/{fileName} {\n      // ZEZWALAJ na utworzenie (zapis/upload) pliku przez każdego.\n      allow create: if true;\n\n      // BLOKUJ odczyt, aktualizację i usuwanie dla wszystkich.\n      allow read, update, delete: if false;\n    }\n\n    // Domyślnie blokuj dostęp do wszystkich innych ścieżek w Storage.\n    match /{allPaths=**} {\n      allow read, write: if false;\n    }\n  }\n}\n","name":"storage.rules"}]},"createTime":"2025-10-08T11:22:43.602415Z","metadata":{"services":["firebase.storage"]}}
+[debug] [2025-10-08T11:22:43.691Z] [rules] created ruleset projects/atpp-rekrutacja-tpp/rulesets/f9a2ff1d-f369-44ff-991d-c86d280a22d2
+[debug] [2025-10-08T11:22:43.691Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:43.691Z] Checked if tokens are valid: true, expires at: 1759925826055
+[debug] [2025-10-08T11:22:43.692Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/atpp-rekrutacja-tpp/releases pageSize=10&pageToken=

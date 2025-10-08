@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Tpp } from './tpp';
+import { Logowanie } from './logowanie';
 
-describe('Tpp', () => {
-  let component: Tpp;
-  let fixture: ComponentFixture<Tpp>;
+describe('Logowanie', () => {
+  let component: Logowanie;
+  let fixture: ComponentFixture<Logowanie>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Tpp]
+      imports: [Logowanie]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Tpp);
+    fixture = TestBed.createComponent(Logowanie);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

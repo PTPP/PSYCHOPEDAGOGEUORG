@@ -1,0 +1,32 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Dostęp do folderu z plikami CV (cv-files)
+    match /cv-files/{fileName} {
+      // ZEZWALAJ na utworzenie (zapis/upload) pliku przez każdego.
+      // Używamy tego do przesyłania CV z formularza.
+      allow create: if true;
+
+      // BLOKUJ odczyt, aktualizację i usuwanie dla wszystkich.
+      // Dostęp do plików będzie realizowany przez linki (download URLs),
+      // które mają własne, bezpieczne mechanizmy autoryzacji.
+      allow read, update, delete: if false;
+    }
+
+    // Dostęp do folderu z listami motywacyjnymi (lm-files)
+    match /lm-files/{fileName} {
+      // ZEZWALAJ na utworzenie (zapis/upload) pliku przez każdego.
+      allow create: if true;
+
+      // BLOKUJ odczyt, aktualizację i usuwanie dla wszystkich.
+      allow read, update, delete: if false;
+    }
+
+    // Domyślnie blokuj dostęp do wszystkich innych ścieżek w Storage.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

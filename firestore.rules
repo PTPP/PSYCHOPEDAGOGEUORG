@@ -1,0 +1,25 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Reguły dla kolekcji 'candidates'
+    match /candidates/{candidateId} {
+      // ZEZWALAJ na utworzenie (zapis) nowego dokumentu przez każdego.
+      // To jest kluczowe dla formularza aplikacyjnego.
+      allow create: if true;
+
+      // ZEZWALAJ na odczyt, aktualizację i usunięcie tylko dla administratorów.
+      // Administrator to zalogowany użytkownik, którego UID jest w kolekcji 'admins'.
+      allow read, update, delete: if request.auth != null && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Reguły dla wszystkich innych dokumentów w bazie danych
+    match /{document=**} {
+      // ZEZWALAJ na pełny dostęp (odczyt i zapis) tylko dla administratorów.
+      // Ta reguła NIE MA ZASTOSOWANIA do operacji 'create' w kolekcji 'candidates',
+      // ponieważ powyższa, bardziej szczegółowa reguła ma pierwszeństwo.
+      allow read, write: if request.auth != null && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+  }
+}

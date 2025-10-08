@@ -1,0 +1,267 @@
+/* --- Global Reset & Glassmorphism Container --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.form-container {
+  position: relative; /* Potrzebne dla pozycjonowania przycisku powrotu */
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #f0f0f0;
+}
+
+/* --- Nagłówek --- */
+.form-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.form-header .logo {
+  width: 100px; /* Dostosuj rozmiar w razie potrzeby */
+  margin-bottom: 1rem;
+}
+
+.form-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.form-header p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Grupy pól --- */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* --- Etykiety z ikonami --- */
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #dcdcdc;
+}
+
+label .material-symbols-outlined {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+/* --- Pola tekstowe, select, textarea --- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.3);
+}
+
+select option {
+  background: #333;
+  color: white;
+}
+
+/* --- Komunikaty o błędach --- */
+.error-message {
+  color: #ff9e9e;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  padding-left: 2rem; /* Wyrównanie z etykietą */
+}
+
+/* --- Pola plików --- */
+.file-group input[type="file"] {
+  display: none;
+}
+
+.file-group label {
+  display: inline-flex;
+  padding: 0.85rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.file-group label:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ff8c00;
+}
+
+.file-name {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* --- Zgody (checkbox) --- */
+.consent-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.consent-group input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: auto;
+}
+
+.consent-group label a {
+  color: #ff8c00;
+  text-decoration: none;
+}
+
+.consent-group label a:hover {
+  text-decoration: underline;
+}
+
+/* --- Pytanie antyspamowe --- */
+.security-check {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- Ukryte pole (Honeypot) --- */
+.honeypot-field {
+  display: none;
+}
+
+/* --- Przyciski akcji z ikonami --- */
+.actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center; /* Zmieniono z flex-end na center */
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+}
+
+.actions button:hover {
+  transform: translateY(-2px);
+}
+
+.actions button .material-symbols-outlined {
+  font-size: 1.25rem;
+}
+
+.submit-btn {
+  background-color: #ff8c00;
+  color: white;
+}
+
+.submit-btn:disabled {
+  background-color: #555;
+  color: #aaa;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.clear-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #f0f0f0;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* --- Powiadomienia o statusie --- */
+.submission-success, .submission-error {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.submission-success {
+  background-color: rgba(40, 167, 69, 0.3);
+  border: 1px solid rgba(40, 167, 69, 0.7);
+}
+
+.submission-error {
+  background-color: rgba(217, 48, 37, 0.3);
+  border: 1px solid rgba(217, 48, 37, 0.7);
+  color: #ffc2bd;
+}
+
+/* --- Media Queries dla responsywności --- */
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .form-header h2 {
+    font-size: 2rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}

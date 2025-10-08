@@ -1,0 +1,27 @@
+@if (show()) {
+  <div class="modal-backdrop" (click)="onClose()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <span class="material-symbols-outlined">{{ icon() }}</span>
+      </div>
+      <div class="modal-body">
+        <p>{{ message() }}</p>
+      </div>
+      <div class="modal-footer">
+        @if (!showConfirmButton() && !showRejectButton()) {
+          <button (click)="onClose()" class="close-btn">OK</button>
+        }
+        @if (showRejectButton()) {
+          <button (click)="onReject()" class="reject-btn">
+            {{ rejectButtonText() }}
+          </button>
+        }
+        @if (showConfirmButton()) {
+          <button (click)="onConfirm()" class="confirm-btn">
+            {{ confirmButtonText() }}
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+}

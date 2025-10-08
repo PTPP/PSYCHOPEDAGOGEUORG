@@ -1,0 +1,31 @@
+<div class="login-container">
+  <app-przycisk-powrotu></app-przycisk-powrotu>
+  <div class="login-form">
+    <div class="tabs">
+      <div class="tab" [class.active]="activeTab() === 'candidate'" (click)="setActiveTab('candidate')">Kandydat</div>
+      <div class="tab" [class.active]="activeTab() === 'hr'" (click)="setActiveTab('hr')">HR</div>
+    </div>
+
+    @if (activeTab() === 'candidate') {
+      <h2>Logowanie Kandydata</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="candidateId">Identyfikator kandydata</label>
+          <input type="text" id="candidateId" formControlName="candidateId" placeholder="Wprowadź swój identyfikator">
+        </div>
+        <button class="candidate-btn" type="submit" [disabled]="!loginForm.valid">
+          <span class="material-symbols-outlined">login</span>
+          Zaloguj się
+        </button>
+      </form>
+    } @else {
+      <h2>Logowanie HR</h2>
+      <p class="hr-info">Pracownicy HR logują się za pomocą swoich kont Google.</p>
+      <button type="button" class="google-btn" (click)="signInWithGoogle()">
+        <span class="material-symbols-outlined">account_circle</span>
+        Zaloguj się z Google
+      </button>
+    }
+
+  </div>
+</div>
