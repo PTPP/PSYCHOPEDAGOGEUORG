@@ -1,0 +1,175 @@
+<div class="page-container">
+  <div class="back-button-wrapper">
+    <app-przycisk-powrotu></app-przycisk-powrotu>
+  </div>
+
+  <div class="form-container">
+    <div class="form-header">
+      <img src="LogoTPP-2025-vect.svg" alt="Logo Firmy" class="form-logo">
+      <h2>Formularz Aplikacyjny</h2>
+      <p>Dołącz do naszego zespołu! Wypełnij poniższy formularz, aby aplikować na wybrane stanowisko.</p>
+    </div>
+
+    <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="imie"><span class="material-symbols-outlined">person</span> Imię</label>
+          <input id="imie" type="text" formControlName="imie" placeholder="Jan">
+          @if (applicationForm.get('imie')?.invalid && applicationForm.get('imie')?.touched) {
+            <div class="error-message">To pole jest wymagane.</div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="nazwisko"><span class="material-symbols-outlined">badge</span> Nazwisko</label>
+          <input id="nazwisko" type="text" formControlName="nazwisko" placeholder="Kowalski">
+          @if (applicationForm.get('nazwisko')?.invalid && applicationForm.get('nazwisko')?.touched) {
+            <div class="error-message">To pole jest wymagane.</div>
+          }
+        </div>
+      </div>
+
+      <div class="form-grid">
+          <div class="form-group">
+            <label for="email"><span class="material-symbols-outlined">mail</span> Adres e-mail</label>
+            <input id="email" type="email" formControlName="email" placeholder="jan.kowalski@example.com">
+            @if (applicationForm.get('email')?.hasError('required') && applicationForm.get('email')?.touched) {
+              <div class="error-message">To pole jest wymagane.</div>
+            }
+            @if (applicationForm.get('email')?.hasError('email') && applicationForm.get('email')?.touched) {
+              <div class="error-message">Podaj poprawny adres email.</div>
+            }
+          </div>
+
+          <div class="form-group">
+            <label for="confirmEmail"><span class="material-symbols-outlined">drafts</span> Potwierdź adres e-mail</label>
+            <input id="confirmEmail" type="email" formControlName="confirmEmail" placeholder="jan.kowalski@example.com">
+            @if (applicationForm.get('confirmEmail')?.hasError('required') && applicationForm.get('confirmEmail')?.touched) {
+              <div class="error-message">To pole jest wymagane.</div>
+            }
+            @if (applicationForm.get('confirmEmail')?.hasError('mustMatch') && applicationForm.get('confirmEmail')?.touched) {
+                <div class="error-message">Adresy e-mail muszą być takie same.</div>
+            }
+          </div>
+      </div>
+
+       <div class="form-grid">
+        <div class="form-group">
+            <label for="telefon"><span class="material-symbols-outlined">call</span> Numer telefonu</label>
+            <input id="telefon" type="tel" formControlName="telefon" placeholder="+48 123 456 789">
+            @if (applicationForm.get('telefon')?.invalid && applicationForm.get('telefon')?.touched) {
+            <div class="error-message">To pole jest wymagane.</div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label for="rola"><span class="material-symbols-outlined">work</span> Rola</label>
+            <select id="rola" formControlName="rola">
+                <option value="" disabled>Wybierz rolę...</option>
+                <option value="specjalista">Specjalista</option>
+                <option value="pracownik administracji">Pracownik administracji</option>
+                <option value="praktykant">Praktykant</option>
+                <option value="wolontariusz">Wolontariusz</option>
+            </select>
+            @if (applicationForm.get('rola')?.invalid && applicationForm.get('rola')?.touched) {
+            <div class="error-message">To pole jest wymagane.</div>
+            }
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="opisSiebie"><span class="material-symbols-outlined">edit_note</span> Opisz siebie</label>
+        <textarea id="opisSiebie" formControlName="opisSiebie" rows="4" placeholder="Napisz kilka słów o sobie, swoich pasjach i doświadczeniu..."></textarea>
+        @if (applicationForm.get('opisSiebie')?.invalid && applicationForm.get('opisSiebie')?.touched) {
+          <div class="error-message">To pole jest wymagane.</div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="motywacja"><span class="material-symbols-outlined">lightbulb</span> Dlaczego do nas aplikujesz?</label>
+        <textarea id="motywacja" formControlName="motywacja" rows="4" placeholder="Co Cię motywuje, by dołączyć do naszego zespołu? Co wiesz o naszej firmie?"></textarea>
+        @if (applicationForm.get('motywacja')?.invalid && applicationForm.get('motywacja')?.touched) {
+          <div class="error-message">To pole jest wymagane.</div>
+        }
+      </div>
+
+      <div class="file-upload-group">
+        <p><span class="material-symbols-outlined">upload_file</span> Prześlij swoje CV (wymagane)</p>
+        <input type="file" hidden (change)="onFileSelected($event, 'cv')" accept=".pdf,.docx,.jpg,.jpeg,.png" id="cv-upload">
+        <button type="button" class="upload-btn outline" (click)="triggerFileInput('cv-upload')">
+           Wybierz plik
+        </button>
+        @if (cvFileName()) {
+          <div class="file-name">
+            <span>{{ cvFileName() }}</span>
+            <button type="button" class="remove-file" (click)="removeFile('cv')">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+        }
+        @if (cvError()) {
+          <div class="error-message">{{ cvError() }}</div>
+        }
+      </div>
+
+      <div class="file-upload-group">
+        <p><span class="material-symbols-outlined">note_add</span> Prześlij swój list motywacyjny (opcjonalnie)</p>
+        <input type="file" hidden (change)="onFileSelected($event, 'listMotywacyjny')" accept=".pdf,.docx,.jpg,.jpeg,.png" id="list-motywacyjny-upload">
+        <button type="button" class="upload-btn outline" (click)="triggerFileInput('list-motywacyjny-upload')">
+           Wybierz plik
+        </button>
+        @if (listMotywacyjnyFileName()) {
+          <div class="file-name">
+            <span>{{ listMotywacyjnyFileName() }}</span>
+            <button type="button" class="remove-file" (click)="removeFile('listMotywacyjny')">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+        }
+         @if (motywacyjnyError()) {
+          <div class="error-message">{{ motywacyjnyError() }}</div>
+        }
+      </div>
+      
+      <div class="form-group math-question">
+        <label for="mathAnswer"><span class="material-symbols-outlined">pin</span> Pytanie antyspamowe: Ile to jest {{ mathQuestion().num1 }} + {{ mathQuestion().num2 }}?</label>
+        <input id="mathAnswer" type="number" formControlName="mathAnswer" placeholder="Twoja odpowiedź">
+        @if (applicationForm.get('mathAnswer')?.hasError('required') && applicationForm.get('mathAnswer')?.touched) {
+          <div class="error-message">To pole jest wymagane.</div>
+        }
+        @if (applicationForm.get('mathAnswer')?.hasError('wrongAnswer') && applicationForm.get('mathAnswer')?.touched) {
+          <div class="error-message">Nieprawidłowa odpowiedź. Spróbuj ponownie.</div>
+        }
+      </div>
+
+      <div class="checkbox-group">
+          <input id="zgodaPrzetwarzanie" type="checkbox" formControlName="zgodaPrzetwarzanie">
+          <label for="zgodaPrzetwarzanie">Wyrażam zgodę na przetwarzanie moich danych osobowych i zgadzam się z <a href="/polityka-prywatnosci">polityką prywatności</a>.</label>
+          @if (applicationForm.get('zgodaPrzetwarzanie')?.invalid && applicationForm.get('zgodaPrzetwarzanie')?.touched) {
+            <div class="error-message">Ta zgoda jest wymagana.</div>
+          }
+      </div>
+
+      <input type="text" formControlName="honeypot" class="honeypot" aria-hidden="true">
+
+      <button type="submit" class="submit-btn" [disabled]="submissionStatus() === 'pending'">
+         @if (submissionStatus() === 'pending') {
+          <span><span class="material-symbols-outlined spin">progress_activity</span> Przesyłanie...</span>
+        } @else {
+          <span><span class="material-symbols-outlined">send</span> Aplikuj</span>
+        }
+      </button>
+    </form>
+  </div>
+</div>
+
+@switch (submissionStatus()) {
+  @case ('success') {
+    <app-info-modal [show]="true" title="Sukces!" message="Dziękujemy za Twoją aplikację. Skontaktujemy się z wybranymi kandydatami." (close)="closeModal()"></app-info-modal>
+  }
+  @case ('error') {
+    <app-info-modal [show]="true" title="Błąd" [message]="submissionError() || 'Wystąpił nieznany błąd.'" (close)="closeModal()"></app-info-modal>
+  }
+}

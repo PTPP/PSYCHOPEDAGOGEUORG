@@ -103,13 +103,8 @@ To jest dokładnie ta metoda, której używa się do ochrony komercyjnych interf
 Komenda do kluczy:
 Ustaw klucz API:
 
-firebase functions:secrets:set GAS_API_KEY
-
-
-
-(Gdy zostaniesz poproszony, wklej swój SECRET_API_KEY)
-
-Ustaw adres URL skryptu:
-
-firebase functions:secrets:set GAS_URL
+firebase functions:secrets:set SMS_API_KEY
+firebase functions:secrets:set SMS_URL
+firebase functions:secrets:set MAIL_API_KEY
+firebase functions:secrets:set MAIL_URL
 

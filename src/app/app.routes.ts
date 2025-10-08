@@ -10,8 +10,8 @@ export const routes: Routes = [
     loadComponent: () => import('./logowanie/logowanie').then(m => m.Logowanie)
   },
   {
-    path: 'aplikuj',
-    loadComponent: () => import('./aplikuj/aplikuj').then(m => m.AplikujComponent)
+    path: 'aplikacja', // Zmieniona ścieżka
+    loadComponent: () => import('./aplikacja-form/aplikacja-form.component').then(m => m.AplikacjaFormComponent)
   },
   {
     path: 'polityka-prywatnosci',

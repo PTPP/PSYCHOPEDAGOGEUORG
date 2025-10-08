@@ -1,35 +1,23 @@
-import { inject, Injectable } from '@angular/core';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
-import { Storage, ref, uploadBytes, getDownloadURL } from '@angular/fire/storage';
-import { Observable, from, forkJoin, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { Injectable, inject } from '@angular/core';
+import { addDoc, collection, Firestore } from '@angular/fire/firestore';
+import { ref, uploadBytes, getDownloadURL, Storage } from '@angular/fire/storage';
 
-// Definicja typu dla danych aplikacji
-// Usunęliśmy pola base64, bo nie są już potrzebne
 export interface ApplicationData {
   imie: string;
-  nazwisko: string;
+  nazwisko: string; 
   email: string;
   telefon: string;
   rola: string;
-  przedstawSie: string;
-  motywacja: string;
+  opisSiebie: string;
+  motywacja: string; 
+  zgodaPrzetwarzanie: boolean;
   cv: File | null;
   listMotywacyjny: File | null;
-}
-
-// Definicja typu dla danych zapisywanych w Firestore
-export interface CandidateDocument {
-  imie: string;
-  nazwisko: string;
-  email: string;
-  telefon: string;
-  rola: string;
-  przedstawSie: string;
-  motywacja: string;
-  cvUrl: string | null; // Link do pliku w Storage
-  listMotywacyjnyUrl: string | null; // Link do pliku w Storage
-  dataAplikacji: Date;
+  status: string;
+  dataAplikacji: string;
+  cvUrl?: string; 
+  listMotywacyjnyUrl?: string;
+  keywords?: string[];
 }
 
 @Injectable({
@@ -39,50 +27,47 @@ export class RecruitmentService {
   private firestore: Firestore = inject(Firestore);
   private storage: Storage = inject(Storage);
 
-  submitApplication(payload: ApplicationData): Observable<any> {
-    // Krok 1: Przesyłanie plików (jeśli istnieją)
-    const cvUpload$ = payload.cv
-      ? this.uploadFile(payload.cv, 'cv-files')
-      : of(null);
+  async submitApplication(applicationData: ApplicationData): Promise<void> {
+    try {
+      let cvUrl = null;
+      if (applicationData.cv) {
+        cvUrl = await this.uploadFile(applicationData.cv, 'cv-files');
+      }
 
-    const lmUpload$ = payload.listMotywacyjny
-      ? this.uploadFile(payload.listMotywacyjny, 'lm-files')
-      : of(null);
+      let listMotywacyjnyUrl = null;
+      if (applicationData.listMotywacyjny) {
+        listMotywacyjnyUrl = await this.uploadFile(applicationData.listMotywacyjny, 'motywacyjny-files');
+      }
 
-    // Krok 2: Czekamy na zakończenie przesyłania obu plików
-    return forkJoin([cvUpload$, lmUpload$]).pipe(
-      switchMap(([cvUrl, lmUrl]) => {
-        // Krok 3: Tworzymy dokument do zapisu w Firestore
-        const candidateData: CandidateDocument = {
-          imie: payload.imie,
-          nazwisko: payload.nazwisko,
-          email: payload.email,
-          telefon: payload.telefon,
-          rola: payload.rola,
-          przedstawSie: payload.przedstawSie,
-          motywacja: payload.motywacja,
-          cvUrl: cvUrl,
-          listMotywacyjnyUrl: lmUrl,
-          dataAplikacji: new Date(),
-        };
+      const keywords = [
+        applicationData.imie.toLowerCase(),
+        applicationData.nazwisko.toLowerCase(),
+        applicationData.email.toLowerCase(),
+        applicationData.telefon.toLowerCase(),
+        applicationData.rola.toLowerCase()
+      ].filter(Boolean); 
 
-        // Krok 4: Zapisujemy dane do kolekcji 'candidates'
-        const candidatesCollection = collection(this.firestore, 'candidates');
-        return from(addDoc(candidatesCollection, candidateData));
-      })
-    );
+      const applicationPayload = {
+        ...applicationData,
+        cvUrl,
+        listMotywacyjnyUrl,
+        cv: null, 
+        listMotywacyjny: null,
+        keywords
+      };
+
+      const docRef = await addDoc(collection(this.firestore, 'candidates'), applicationPayload);
+      console.log('Aplikacja została pomyślnie wysłana. ID dokumentu:', docRef.id);
+    } catch (error) {
+      console.error('Błąd podczas dodawania dokumentu aplikacji:', error);
+      throw new Error('Nie udało się wysłać aplikacji. Spróbuj ponownie.');
+    }
   }
 
-  // Prywatna metoda do przesyłania pliku i pobierania jego URL
-  private uploadFile(file: File, path: string): Observable<string> {
-    // Tworzymy unikalną ścieżkę dla każdego pliku
-    const filePath = `${path}/${new Date().getTime()}_${file.name}`;
-    const storageRef = ref(this.storage, filePath);
-    const uploadTask = from(uploadBytes(storageRef, file));
-
-    // Po przesłaniu pliku, pobieramy jego URL
-    return uploadTask.pipe(
-      switchMap(() => from(getDownloadURL(storageRef)))
-    );
+  private async uploadFile(file: File, path: string): Promise<string> {
+    const storageRef = ref(this.storage, `${path}/${new Date().getTime()}_${file.name}`);
+    const uploadResult = await uploadBytes(storageRef, file);
+    const downloadURL = await getDownloadURL(uploadResult.ref);
+    return downloadURL;
   }
 }

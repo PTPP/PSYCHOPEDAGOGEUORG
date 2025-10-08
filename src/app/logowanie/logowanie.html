@@ -1,6 +1,12 @@
-<div class="login-container">
-  <app-przycisk-powrotu></app-przycisk-powrotu>
+<div class="page-container">
+  <div class="back-button-wrapper">
+    <app-przycisk-powrotu></app-przycisk-powrotu>
+  </div>
+
   <div class="login-form">
+    <!-- Logo przeniesione do środka kontenera -->
+    <img src="LogoTPP-2025-vect.svg" alt="Logo" class="login-logo">
+
     <div class="tabs">
       <div class="tab" [class.active]="activeTab() === 'candidate'" (click)="setActiveTab('candidate')">Kandydat</div>
       <div class="tab" [class.active]="activeTab() === 'hr'" (click)="setActiveTab('hr')">HR</div>

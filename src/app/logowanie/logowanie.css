@@ -1,21 +1,24 @@
-
-.login-container {
+.page-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  padding: 2rem;
+  min-height: 100vh;
   background-image: url('/assets/bg.jpg');
   background-size: cover;
   background-position: center;
-  position: relative;
+  box-sizing: border-box;
 }
 
-app-przycisk-powrotu {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  z-index: 10;
+.back-button-wrapper {
+  width: 100%;
+  max-width: 400px; /* Dopasowanie do szerokości formularza */
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
 }
+
+/* Usunięto pozycjonowanie absolutne dla app-przycisk-powrotu */
 
 .login-form {
   padding: 40px;
@@ -30,6 +33,25 @@ app-przycisk-powrotu {
   position: relative;
   z-index: 1;
   color: white;
+}
+
+.login-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  animation: breathing 5s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .tabs {

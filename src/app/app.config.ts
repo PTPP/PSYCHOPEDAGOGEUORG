@@ -7,6 +7,7 @@ import { routes } from './app.routes';
 
 // Importy Firebase z @angular/fire
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth'; // <--- IMPORT
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
@@ -20,13 +21,9 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
 
     // --- Konfiguracja Firebase ---
-    // 1. Inicjalizacja aplikacji Firebase przy użyciu konfiguracji z environment.ts
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-
-    // 2. Udostępnienie instancji Cloud Firestore
+    provideAuth(() => getAuth()), // <--- POPRAWKA
     provideFirestore(() => getFirestore()),
-
-    // 3. Udostępnienie instancji Cloud Storage
     provideStorage(() => getStorage()),
   ],
 };
