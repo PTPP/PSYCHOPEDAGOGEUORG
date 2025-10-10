@@ -3,8 +3,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- About -->
             <div>
-                <a href="{% if page.lang == 'en' %}{{ '/index_en.html' | relative_url }}{% else %}{{ '/index.html' | relative_url }}{% endif %}" aria-label="Strona główna">
-                    <img src="{{ '/img/logo.svg' | relative_url }}" alt="Logo Towarzystwa Psychopedagogicznego" class="h-14 w-auto mb-4 logo-breathing">
+                <a href="{% if page.lang == 'en' %}{{ '/index_en.html' | prepend: site.baseurl }}{% else %}{{ '/index.html' | prepend: site.baseurl }}{% endif %}" aria-label="Strona główna">
+                    <img src="{{ '/img/logo.svg' | prepend: site.baseurl }}" alt="Logo Towarzystwa Psychopedagogicznego" class="h-14 w-auto mb-4 logo-breathing">
                 </a>
                 <p class="mb-2">59-700 Bolesławiec, ul. Warszawska 1/3</p>
                 <p class="text-sm">KRS: 0000586474</p>
@@ -17,17 +17,17 @@
                 <h3 class="font-serif text-lg font-bold text-white mb-4">{% if page.lang == 'en' %}Quick Links{% else %}Na Skróty{% endif %}</h3>
                 <ul class="space-y-2">
                     {% if page.lang == 'en' %}
-                        <li><a href="{{ '/index_en.html' | relative_url }}" class="hover:text-orange-500 transition">Home</a></li>
-                        <li><a href="{{ '/services_en.html' | relative_url }}" class="hover:text-orange-500 transition">Services</a></li>
-                        <li><a href="{{ '/en/blog/' | relative_url }}" class="hover:text-orange-500 transition">Blog</a></li>
-                        <li><a href="{{ '/cennik_en.html' | relative_url }}" class="hover:text-orange-500 transition">Price List</a></li>
-                        <li><a href="{{ '/kontakt_en.html' | relative_url }}" class="hover:text-orange-500 transition">Contact</a></li>
+                        <li><a href="{{ '/index_en.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="{{ '/services_en.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Services</a></li>
+                        <li><a href="{{ '/en/blog/' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Blog</a></li>
+                        <li><a href="{{ '/cennik_en.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Price List</a></li>
+                        <li><a href="{{ '/kontakt_en.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Contact</a></li>
                     {% else %}
-                        <li><a href="{{ '/index.html' | relative_url }}" class="hover:text-orange-500 transition">Strona główna</a></li>
-                        <li><a href="{{ '/services.html' | relative_url }}" class="hover:text-orange-500 transition">Usługi</a></li>
-                        <li><a href="{{ '/blog/' | relative_url }}" class="hover:text-orange-500 transition">Blog</a></li>
-                        <li><a href="{{ '/cennik.html' | relative_url }}" class="hover:text-orange-500 transition">Cennik</a></li>
-                        <li><a href="{{ '/kontakt.html' | relative_url }}" class="hover:text-orange-500 transition">Kontakt</a></li>
+                        <li><a href="{{ '/index.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Strona główna</a></li>
+                        <li><a href="{{ '/services.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Usługi</a></li>
+                        <li><a href="{{ '/blog/' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Blog</a></li>
+                        <li><a href="{{ '/cennik.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Cennik</a></li>
+                        <li><a href="{{ '/kontakt.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Kontakt</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -74,13 +74,13 @@
             <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. {% if page.lang == 'en' %}All rights reserved.{% else %}Wszelkie prawa zastrzeżone.{% endif %}</p>
             <div class="mt-4 text-sm flex justify-center items-center space-x-4 flex-wrap">
                 {% if page.lang == 'en' %}
-                    <a href="{{ '/cennik_en.html' | relative_url }}" class="hover:text-orange-500 transition">Price List</a>
+                    <a href="{{ '/cennik_en.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Price List</a>
                     <span class="text-gray-600 hidden sm:inline">|</span>
                     <a href="https://docs.google.com/document/d/1pOuXgb7sWJpwLhJczbJv6RQyzZj8YpJ4VeM_naO-zr0/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition">Terms of Service</a>
                     <span class="text-gray-600 hidden sm:inline">|</span>
                     <a href="https://docs.google.com/document/d/14Ss66Yt8tSiCjNevOBRHsFZHbrD3tA5Wtbyyfh1--Vs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition">Privacy Policy</a>
                 {% else %}
-                    <a href="{{ '/cennik.html' | relative_url }}" class="hover:text-orange-500 transition">Cennik</a>
+                    <a href="{{ '/cennik.html' | prepend: site.baseurl }}" class="hover:text-orange-500 transition">Cennik</a>
                     <span class="text-gray-600 hidden sm:inline">|</span>
                     <a href="https://docs.google.com/document/d/1pOuXgb7sWJpwLhJczbJv6RQyzZj8YpJ4VeM_naO-zr0/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition">Regulamin świadczenia usług</a>
                     <span class="text-gray-600 hidden sm:inline">|</span>

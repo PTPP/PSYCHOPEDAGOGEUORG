@@ -8,22 +8,22 @@
 <nav id="main-nav">
     <ul>
         {% if page.lang == 'en' %}
-            <li><a class="link" href="{{ '/index_en.html' | relative_url }}">Home</a></li>
-            <li><a class="link" href="{{ '/services_en.html' | relative_url }}">Services</a></li>
-            <li><a class="link" href="{{ '/en/blog/' | relative_url }}">Blog</a></li>
-            <li><a class="link" href="{{ '/projects_en.html' | relative_url }}">Our Social Actions</a></li>
-            <li><a class="link" href="{{ '/cennik_en.html' | relative_url }}">Price List</a></li>
-            <li><a class="link" href="{{ '/kontakt_en.html' | relative_url }}">Contact</a></li>
-            <li><a class="link" href="{{ '/apply_en.html' | relative_url }}">Apply</a></li>
+            <li><a class="link" href="{{ '/index_en.html' | prepend: site.baseurl }}">Home</a></li>
+            <li><a class="link" href="{{ '/services_en.html' | prepend: site.baseurl }}">Services</a></li>
+            <li><a class="link" href="{{ '/en/blog/' | prepend: site.baseurl }}">Blog</a></li>
+            <li><a class="link" href="{{ '/projects_en.html' | prepend: site.baseurl }}">Our Social Actions</a></li>
+            <li><a class="link" href="{{ '/cennik_en.html' | prepend: site.baseurl }}">Price List</a></li>
+            <li><a class="link" href="{{ '/kontakt_en.html' | prepend: site.baseurl }}">Contact</a></li>
+            <li><a class="link" href="{{ '/apply_en.html' | prepend: site.baseurl }}">Apply</a></li>
             <li><a class="link" href="mailto:office@psychopedagog.org">Contact for Appointment</a></li>
         {% else %}
-            <li><a class="link" href="{{ '/index.html' | relative_url }}">Strona główna</a></li>
-            <li><a class="link" href="{{ '/services.html' | relative_url }}">Usługi</a></li>
-            <li><a class="link" href="{{ '/blog/' | relative_url }}">Blog</a></li>
-            <li><a class="link" href="{{ '/projects.html' | relative_url }}">Nasze akcje społeczne</a></li>
-            <li><a class="link" href="{{ '/cennik.html' | relative_url }}">Cennik</a></li>
-            <li><a class="link" href="{{ '/kontakt.html' | relative_url }}">Kontakt</a></li>
-            <li><a class="link" href="{{ '/apply.html' | relative_url }}">Aplikuj</a></li>
+            <li><a class="link" href="{{ '/index.html' | prepend: site.baseurl }}">Strona główna</a></li>
+            <li><a class="link" href="{{ '/services.html' | prepend: site.baseurl }}">Usługi</a></li>
+            <li><a class="link" href="{{ '/blog/' | prepend: site.baseurl }}">Blog</a></li>
+            <li><a class="link" href="{{ '/projects.html' | prepend: site.baseurl }}">Nasze akcje społeczne</a></li>
+            <li><a class="link" href="{{ '/cennik.html' | prepend: site.baseurl }}">Cennik</a></li>
+            <li><a class="link" href="{{ '/kontakt.html' | prepend: site.baseurl }}">Kontakt</a></li>
+            <li><a class="link" href="{{ '/apply.html' | prepend: site.baseurl }}">Aplikuj</a></li>
             <li><a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSeN-68fnnwuvtNcuTz1UATSXIOHPS-Q0-ar3We3fRDyrKf9cw/viewform" target="_blank" rel="noopener noreferrer">Umów wizytę online</a></li>
         {% endif %}
     </ul>
