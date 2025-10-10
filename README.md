@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
@@ -25,3 +26,6 @@ Ta strona jest zbudowana przy użyciu Jekylla, generatora stron statycznych. Jes
     ```
 3.  **Otwórz stronę w przeglądarce:**
     Wejdź na adres `http://localhost:4000`.
+=======
+Strona Glowa TPP
+>>>>>>> 9af8265f03645fe0746255637d93685f0e966b9d
