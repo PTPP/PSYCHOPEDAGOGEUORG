@@ -182,40 +182,4 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/cennik_en.html"/>
   </url>
 
-  <!-- Blog -->
-  <url>
-    <loc>https://psychopedagog.org/blog/index.html</loc>
-    <lastmod>2024-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/blog/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/en/blog/index.html"/>
-  </url>
-  <url>
-    <loc>https://psychopedagog.org/en/blog/index.html</loc>
-    <lastmod>2024-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/blog/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/en/blog/index.html"/>
-  </url>
-
-  <!-- Przykładowe wpisy blogowe -->
-  <url>
-    <loc>https://psychopedagog.org/blog/witaj-na-naszym-blogu/</loc>
-    <lastmod>2024-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/blog/witaj-na-naszym-blogu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/en/blog/welcome-to-our-blog/"/>
-  </url>
-  <url>
-    <loc>https://psychopedagog.org/en/blog/welcome-to-our-blog/</loc>
-    <lastmod>2024-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/blog/witaj-na-naszym-blogu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/en/blog/welcome-to-our-blog/"/>
-  </url>
-
 </urlset>
