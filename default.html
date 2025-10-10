@@ -8,6 +8,19 @@
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
     
     {% if page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+
+    {%- comment -%} SEO: Hreflang tags for language alternatives {%- endcomment -%}
+    {% if page.ref %}
+        {% assign posts_pl = site.posts_pl | where: "ref", page.ref %}
+        {% for post in posts_pl %}<link rel="alternate" hreflang="pl" href="{{ site.url }}{{ post.url }}">{% endfor %}
+        {% assign posts_en = site.posts_en | where: "ref", page.ref %}
+        {% for post in posts_en %}<link rel="alternate" hreflang="en" href="{{ site.url }}{{ post.url }}">{% endfor %}
+    {% elsif page.translation_url %}
+        {% if page.lang == 'pl' %}<link rel="alternate" hreflang="pl" href="{{ site.url }}{{ page.url }}">{% endif %}
+        {% if page.lang == 'en' %}<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">{% endif %}
+        {% if page.lang == 'pl' %}<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.translation_url }}">{% endif %}
+        {% if page.lang == 'en' %}<link rel="alternate" hreflang="pl" href="{{ site.url }}{{ page.translation_url }}">{% endif %}
+    {% endif %}
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
