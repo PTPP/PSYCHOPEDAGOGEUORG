@@ -1,0 +1,92 @@
+<footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- About -->
+            <div>
+                <a href="{% if page.lang == 'en' %}{{ '/index_en.html' | relative_url }}{% else %}{{ '/index.html' | relative_url }}{% endif %}" aria-label="Strona główna">
+                    <img src="{{ '/img/logo.svg' | relative_url }}" alt="Logo Towarzystwa Psychopedagogicznego" class="h-14 w-auto mb-4 logo-breathing">
+                </a>
+                <p class="mb-2">59-700 Bolesławiec, ul. Warszawska 1/3</p>
+                <p class="text-sm">KRS: 0000586474</p>
+                <p class="text-sm">NIP: 6121856217</p>
+                <p class="text-sm">REGON: 363015316</p>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h3 class="font-serif text-lg font-bold text-white mb-4">{% if page.lang == 'en' %}Quick Links{% else %}Na Skróty{% endif %}</h3>
+                <ul class="space-y-2">
+                    {% if page.lang == 'en' %}
+                        <li><a href="{{ '/index_en.html' | relative_url }}" class="hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="{{ '/services_en.html' | relative_url }}" class="hover:text-orange-500 transition">Services</a></li>
+                        <li><a href="{{ '/en/blog/' | relative_url }}" class="hover:text-orange-500 transition">Blog</a></li>
+                        <li><a href="{{ '/cennik_en.html' | relative_url }}" class="hover:text-orange-500 transition">Price List</a></li>
+                        <li><a href="{{ '/kontakt_en.html' | relative_url }}" class="hover:text-orange-500 transition">Contact</a></li>
+                    {% else %}
+                        <li><a href="{{ '/index.html' | relative_url }}" class="hover:text-orange-500 transition">Strona główna</a></li>
+                        <li><a href="{{ '/services.html' | relative_url }}" class="hover:text-orange-500 transition">Usługi</a></li>
+                        <li><a href="{{ '/blog/' | relative_url }}" class="hover:text-orange-500 transition">Blog</a></li>
+                        <li><a href="{{ '/cennik.html' | relative_url }}" class="hover:text-orange-500 transition">Cennik</a></li>
+                        <li><a href="{{ '/kontakt.html' | relative_url }}" class="hover:text-orange-500 transition">Kontakt</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="font-serif text-lg font-bold text-white mb-4">{% if page.lang == 'en' %}Contact{% else %}Kontakt{% endif %}</h3>
+                <p class="mb-2">
+                    <a href="tel:+48733379538" class="hover:text-orange-500 transition flex items-center">
+                        <span class="mr-2">📞</span> (+48) 733 379 538
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:biuro@psychopedagog.org" class="hover:text-orange-500 transition flex items-center">
+                        <span class="mr-2">📧</span> biuro@psychopedagog.org
+                    </a>
+                </p>
+                <p class="mt-2">
+                    <a href="https://wa.me/48733379538" class="hover:text-orange-500 transition flex items-center">
+                        <span class="mr-2">📱</span> WhatsApp
+                    </a>
+                </p>
+            </div>
+            
+            <!-- Social -->
+            <div>
+                <h3 class="font-serif text-lg font-bold text-white mb-4">{% if page.lang == 'en' %}Find us{% else %}Znajdź nas{% endif %}</h3>
+                <ul class="social-list">
+                    <li><a class="facebook" href="https://www.facebook.com/psychopedagogorg" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span></span><span></span><span></span><span></span><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a class="youtube" href="https://www.youtube.com/channel/UCyq8LukhgPA8FZyRX3zLh_w" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span></span><span></span><span></span><span></span><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a class="instagram" href="https://www.instagram.com/psychopedagogorg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span></span><span></span><span></span><span></span><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a class="threads" href="https://www.threads.com/@psychopedagogorg" target="_blank" rel="noopener noreferrer" aria-label="Threads"><span></span><span></span><span></span><span></span><i class="fa fa-at" aria-hidden="true"></i></a></li>
+                    <li><a class="tiktok" href="https://www.tiktok.com/@psychopedagogorg" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><span></span><span></span><span></span><span></span><i class="fa fa-music" aria-hidden="true"></i></a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/company/19124226/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span></span><span></span><span></span><span></span><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a class="pinterest" href="https://pl.pinterest.com/psychopedagogorg/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><span></span><span></span><span></span><span></span><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                    <li><a class="blogger" href="https://plpsychconorg.blogspot.com/" target="_blank" rel="noopener noreferrer" aria-label="Blogger"><span></span><span></span><span></span><span></span><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="my-8 border-gray-700">
+
+        <div class="text-center text-gray-500">
+            <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. {% if page.lang == 'en' %}All rights reserved.{% else %}Wszelkie prawa zastrzeżone.{% endif %}</p>
+            <div class="mt-4 text-sm flex justify-center items-center space-x-4 flex-wrap">
+                {% if page.lang == 'en' %}
+                    <a href="{{ '/cennik_en.html' | relative_url }}" class="hover:text-orange-500 transition">Price List</a>
+                    <span class="text-gray-600 hidden sm:inline">|</span>
+                    <a href="https://docs.google.com/document/d/1pOuXgb7sWJpwLhJczbJv6RQyzZj8YpJ4VeM_naO-zr0/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition">Terms of Service</a>
+                    <span class="text-gray-600 hidden sm:inline">|</span>
+                    <a href="https://docs.google.com/document/d/14Ss66Yt8tSiCjNevOBRHsFZHbrD3tA5Wtbyyfh1--Vs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition">Privacy Policy</a>
+                {% else %}
+                    <a href="{{ '/cennik.html' | relative_url }}" class="hover:text-orange-500 transition">Cennik</a>
+                    <span class="text-gray-600 hidden sm:inline">|</span>
+                    <a href="https://docs.google.com/document/d/1pOuXgb7sWJpwLhJczbJv6RQyzZj8YpJ4VeM_naO-zr0/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition">Regulamin świadczenia usług</a>
+                    <span class="text-gray-600 hidden sm:inline">|</span>
+                    <a href="https://docs.google.com/document/d/14Ss66Yt8tSiCjNevOBRHsFZHbrD3tA5Wtbyyfh1--Vs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-orange-500 transition">Polityka Prywatności</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>
