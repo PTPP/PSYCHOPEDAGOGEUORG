@@ -164,4 +164,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/kontakt_en.html"/>
   </url>
 
+  <!-- Cennik / Price List -->
+  <url>
+    <loc>https://psychopedagog.org/cennik.html</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/cennik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/cennik_en.html"/>
+  </url>
+  <url>
+    <loc>https://psychopedagog.org/cennik_en.html</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/cennik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/cennik_en.html"/>
+  </url>
+
 </urlset>
