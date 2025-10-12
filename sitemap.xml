@@ -131,7 +131,7 @@
   <!-- Aplikuj / Apply -->
   <url>
     <loc>https://psychopedagog.org/apply.html</loc>
-    <lastmod>2024-07-26</lastmod>
+    <lastmod>2025-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/apply.html"/>
@@ -139,7 +139,7 @@
   </url>
   <url>
     <loc>https://psychopedagog.org/apply_en.html</loc>
-    <lastmod>2024-07-26</lastmod>
+    <lastmod>2025-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/apply.html"/>
@@ -180,6 +180,58 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/cennik.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/cennik_en.html"/>
+  </url>
+
+  <!-- Rekrutacja: nowe podstrony -->
+  <url>
+    <loc>https://psychopedagog.org/oferty-wspolpracy.html</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/oferty-wspolpracy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/oferty-wspolpracy_en.html"/>
+  </url>
+  <url>
+    <loc>https://psychopedagog.org/oferty-wspolpracy_en.html</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/oferty-wspolpracy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/oferty-wspolpracy_en.html"/>
+  </url>
+
+  <url>
+    <loc>https://psychopedagog.org/polityka-prywatnosci.html</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/polityka-prywatnosci.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/polityka-prywatnosci_en.html"/>
+  </url>
+  <url>
+    <loc>https://psychopedagog.org/polityka-prywatnosci_en.html</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/polityka-prywatnosci.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/polityka-prywatnosci_en.html"/>
+  </url>
+
+  <url>
+    <loc>https://psychopedagog.org/etapy-rekrutacji.html</loc>
+    <lastmod>2025-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/etapy-rekrutacji.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/etapy-rekrutacji_en.html"/>
+  </url>
+  <url>
+    <loc>https://psychopedagog.org/etapy-rekrutacji_en.html</loc>
+    <lastmod>2025-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://psychopedagog.org/etapy-rekrutacji.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychopedagog.org/etapy-rekrutacji_en.html"/>
   </url>
 
 </urlset>
