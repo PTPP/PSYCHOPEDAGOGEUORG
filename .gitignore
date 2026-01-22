@@ -1,0 +1,7 @@
+/*
+!/dist/
+!/.gitignore
+!/package.json
+node_modules/
+.astro/
+.vscode/
