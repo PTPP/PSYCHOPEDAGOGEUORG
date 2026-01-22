@@ -1,0 +1,784 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const pricingItems = [
+    {
+        categories: ["Terapia i Pomoc", "Dorośli", "Dzieci i Młodzież"],
+        subcategory: "Poradnictwo",
+        title: "Konsultacja Wstępna",
+        description:
+            "Konsultacja z Counsellorem, Pedagogiem lub Doradcą Psychospołecznym. Interwencja kryzysowa.",
+        duration: "50 min",
+        price: 200,
+        tags: ["terapia", "konsultacja"],
+        icon: "👋",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dla Sądu"],
+        subcategory: "Sądowe",
+        title: "Konsultacja Sądowa",
+        description:
+            "Konsultacja z Ekspertem ds. Opiniowania. Analiza sytuacji procesowej i rodzinnej.",
+        duration: "50 min",
+        price: 300,
+        tags: ["sąd", "konsultacja"],
+        icon: "⚖️",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dzieci i Młodzież", "Dorośli"],
+        subcategory: "Counselling",
+        title: "Indywidualny Trening Psychospołeczny",
+        description:
+            "To cykl spotkań nastawionych na rozwój umiejętności i codzienną higienę psychiczną. Pracujemy w sposób konkretny i zadaniowy: wybierasz obszar, który najbardziej przeszkadza w funkcjonowaniu (np. napięcie, przeciążenie, stres, natłok myśli, spadek motywacji), a my dobieramy proste narzędzia do wdrożenia od razu.",
+        duration: "50 min",
+        price: 200,
+        tags: ["terapia", "indywidualna", "counselling"],
+        icon: "🧠",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dzieci i Młodzież"],
+        subcategory: "Rozwój i Edukacja",
+        title: "Wsparcie psychopedagogiczne dzieci i młodzieży",
+        description:
+            "Spotkania edukacyjno-rozwojowe: regulacja emocji, TKE-S, wsparcie w kryzysie, konsultacje wychowawcze.",
+        duration: "50 min",
+        price: 200,
+        tags: ["dzieci", "młodzież", "rozwój"],
+        icon: "🌱",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dla Sądu"],
+        subcategory: "Sądowe / Edukacja",
+        title: "Sesja Korekcyjno-Edukacyjna",
+        description:
+            "Realizacja zaleceń sądowych, poprawa kompetencji wychowawczych.",
+        duration: "50 min",
+        price: 300,
+        tags: ["sąd", "edukacja"],
+        icon: "🎓",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dzieci i Młodzież", "Dorośli"],
+        subcategory: "Rodzina",
+        title: "Poradnictwo Rodzinne / Mediacje",
+        description: "Sesja Rodzinna / Systemowa. Rozwiązywanie konfliktów.",
+        duration: "50 min",
+        price: 200,
+        tags: ["rodzina", "mediacje"],
+        icon: "👨‍👩‍👧‍👦",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dorośli"],
+        subcategory: "Pary",
+        title: "Trening Relacji dla Par",
+        description: "Praca nad komunikacją i bliskością w związku.",
+        duration: "50 min",
+        price: 200,
+        tags: ["pary", "związek"],
+        icon: "💑",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dorośli", "Dzieci i Młodzież"],
+        subcategory: "Profilaktyka",
+        title: "Profilaktyka Uzależnień",
+        description:
+            "Wsparcie w trzeźwości. Dla osób zgłaszających się dobrowolnie.",
+        duration: "50 min",
+        price: 200,
+        tags: ["uzależnienia", "profilaktyka"],
+        icon: "🛡️",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dorośli", "Dzieci i Młodzież"],
+        subcategory: "Online",
+        title: "Sesja Online",
+        description:
+            "Counselling / E-wizyta. Pełnowartościowa sesja przez internet.",
+        duration: "50 min",
+        price: 200,
+        tags: ["online", "zdalnie"],
+        icon: "💻",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dzieci i Młodzież", "Dorośli"],
+        subcategory: "Wizyta",
+        title: "Wizyta Domowa",
+        description:
+            "Sesja w środowisku klienta (+ koszt dojazdu zależnie od lokalizacji).",
+        duration: "50 min",
+        price: 400,
+        pricePrefix: "od ",
+        tags: ["domowa", "mobilna"],
+        icon: "🏠",
+    },
+
+    {
+        categories: ["Dietetyka", "Terapia i Pomoc"],
+        subcategory: "Konsultacja",
+        title: "Konsultacja Psychodietetyczna",
+        description: "Zmiana nawyków żywieniowych.",
+        duration: "50 min",
+        price: 170,
+        tags: ["dieta", "odżywianie"],
+        icon: "🍎",
+    },
+    {
+        categories: ["Dietetyka"],
+        subcategory: "Plany",
+        title: "Indywidualne Plany Żywieniowe 1 tydzień",
+        description: "Dopasowane do Twoich potrzeb i preferencji.",
+        duration: "1 Tydzień",
+        price: 100,
+        tags: ["dieta", "plan"],
+        icon: "📅",
+    },
+    {
+        categories: ["Dietetyka"],
+        subcategory: "Plany",
+        title: "Indywidualne Plany Żywieniowe 2 tygodnie",
+        description: "Dopasowane do Twoich potrzeb i preferencji.",
+        duration: "2 Tygodnie",
+        price: 200,
+        tags: ["dieta", "plan"],
+        icon: "🥗",
+    },
+    {
+        categories: ["Dietetyka"],
+        subcategory: "Plany",
+        title: "Indywidualne Plany Żywieniowe 4 tygodnie",
+        description: "Dopasowane do Twoich potrzeb i preferencji.",
+        duration: "4 Tygodnie",
+        price: 400,
+        tags: ["dieta", "plan"],
+        icon: "🥑",
+    },
+    {
+        categories: ["Dzieci i Młodzież", "Terapia i Pomoc"],
+        subcategory: "Grupy",
+        title: "TUS - Trening Umiejętności Społecznych",
+        description: "Zajęcia grupowe rozwijające kompetencje społeczne.",
+        duration: "60 min / tydz",
+        price: 110,
+        tags: ["dzieci", "grupa", "tus"],
+        icon: "🎲",
+    },
+    {
+        categories: ["Terapia i Pomoc", "Dorośli"],
+        subcategory: "Dorośli",
+        title: "Grupa Wsparcia i Rozwoju",
+        description: "Abonament miesięczny.",
+        duration: "120 min / tydz",
+        price: 600,
+        tags: ["dorośli", "grupa"],
+        icon: "👥",
+    },
+    {
+        categories: ["Dla Sądu"],
+        subcategory: "Dokumentacja",
+        title: "Zaświadczenie o uczestnictwie",
+        description:
+            "Wymagana ciągłość spotkań (min 2 sesje). Czas realizacji do 7 dni roboczych.",
+        duration: "Dokument",
+        price: 300,
+        tags: ["sąd", "zaświadczenie"],
+        icon: "📄",
+    },
+    {
+        categories: ["Dla Sądu"],
+        subcategory: "Ekspertyzy",
+        title: "Opinia Psychopedagogiczna",
+        description:
+            "Kompleksowa opinia dla Sądu lub Instytucji. Dokument ma charakter opinii prywatnej. Cena zależy od liczby badanych i zakresu opinii.",
+        duration: "Obszerny raport",
+        price: 5000,
+        pricePrefix: "od ",
+        tags: ["sąd", "opinia"],
+        icon: "📑",
+    },
+    {
+        categories: ["Dla Sądu"],
+        subcategory: "Dowody",
+        title: "Transkrypcja Nagrań",
+        description: "Zamiana nagrań audio/wideo na tekst do celów dowodowych.",
+        duration: "Za godzinę nagrania",
+        price: 150,
+        pricePrefix: "od ",
+        tags: ["sąd", "dowody"],
+        icon: "📼",
+    },
+    {
+        categories: ["Kursy i Szkolenia", "Dla Sądu"],
+        subcategory: "Dla Sądu",
+        title: "Kurs Kompetencji Rodzicielskich (Indywidualny)",
+        description:
+            "10h zajęć z trenerem, Egzamin, Certyfikat dla Sądu, Suplement.",
+        duration: "Indywidualny",
+        price: 3500,
+        tags: ["kurs", "rodzice", "sąd"],
+        icon: "🎓",
+    },
+    {
+        categories: ["Kursy i Szkolenia", "Dla Sądu"],
+        subcategory: "Dla Sądu",
+        title: "Kurs Kompetencji Rodzicielskich (Grupowy)",
+        description:
+            "10h zajęć z trenerem, Egzamin, Certyfikat dla Sądu, Suplement.",
+        duration: "Grupowy",
+        price: 1500,
+        tags: ["kurs", "rodzice", "sąd"],
+        icon: "🏫",
+    },
+    {
+        categories: ["Kursy i Szkolenia", "Terapia i Pomoc"],
+        subcategory: "Dla Par",
+        title: "Kurs Przedmałżeński / Dla Par",
+        description: "10h zajęć, Certyfikat, warsztaty komunikacji.",
+        duration: "10h zajęć",
+        price: 1000,
+        tags: ["kurs", "pary"],
+        icon: "💍",
+    },
+    {
+        categories: ["Kursy i Szkolenia"],
+        subcategory: "Edukacja",
+        title: "Egzamin Poprawkowy",
+        description: "Ponowne podejście do testu końcowego kursu.",
+        duration: "Test",
+        price: 350,
+        tags: ["egzamin"],
+        icon: "📝",
+    },
+];
+
+const filters = [
+    { label: "Wszystko", value: "all" },
+    { label: "Wsparcie i Pomoc", value: "Terapia i Pomoc" },
+    { label: "Dzieci i Młodzież", value: "Dzieci i Młodzież" },
+    { label: "Dla Sądu", value: "Dla Sądu" },
+    { label: "Dietetyka", value: "Dietetyka" },
+    { label: "Kursy i Szkolenia", value: "Kursy i Szkolenia" },
+];
+---
+
+<Layout
+    title="Cennik Wsparcia Psychospołecznego i Edukacji | TPP Bolesławiec"
+    description="Sprawdź ceny counsellingu (wsparcia psychospołecznego), mediacji rodzinnych, konsultacji, opinii prywatnych i kursów. Bolesławiec i online."
+    lang="pl"
+>
+    <Header lang="pl" />
+
+    <main class="pricing-page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Karta Usług Wsparcia i Rozwoju</h1>
+                <p class="subtitle">
+                    Świadczonych przez Centrum Wsparcia Towarzystwa
+                    Psychopedagogicznego
+                </p>
+                <p class="legal-note">
+                    w ramach odpłatnej działalności pożytku publicznego (Dz.U.
+                    2024, poz. 1491)
+                </p>
+                <p class="date">Bolesławiec — obowiązuje od 01.01.2026</p>
+            </div>
+        </section>
+
+        <div class="container pricing-container">
+            <!-- Legal Disclaimer -->
+            <div class="disclaimer-alert">
+                <p>
+                    <strong>Ważna informacja prawna:</strong> Niniejszy opis ma charakter
+                    wyłącznie informacyjny i nie stanowi oferty handlowej. Usługi
+                    świadczone przez Towarzystwo mają charakter edukacyjny, rozwojowy
+                    i wsparciowy (counselling).
+                    <br /><br />
+                    <strong>Nie stanowią świadczeń opieki zdrowotnej</strong> w rozumieniu
+                    ustawy o działalności leczniczej. W przypadku podejrzenia zaburzeń
+                    wymagających leczenia farmakologicznego lub hospitalizacji, nasi
+                    specjaliści kierują do placówek ochrony zdrowia. Korzystając z
+                    usług Towarzystwa, akceptujesz ten zakres współpracy.
+                </p>
+            </div>
+
+            <!-- Rules Panel (Mini-Panel Zasad) -->
+            <div class="rules-panel">
+                <div class="rule-item">
+                    <h3>Płatność</h3>
+                    <p>
+                        Bezgotowkowa, karta, Apply Pay, Google Pay,BLIK. Przy
+                        pomocy linku SumUP lub terminalem w poradni. Płatność
+                        regulowana przed wizytą.
+                    </p>
+                </div>
+                <div class="rule-item">
+                    <h3>Odwołanie wizyty</h3>
+                    <p>
+                        Do 4h przed terminem bezpłatnie. Brak odwołania: 100%
+                        ceny.
+                    </p>
+                </div>
+                <div class="rule-item">
+                    <h3>Lokalizacja</h3>
+                    <p>
+                        Gabinet w Bolesławcu (Warszawska 1/3) lub Online. Wizyty
+                        domowe za dopłatą.
+                    </p>
+                </div>
+                <div class="rule-item">
+                    <h3>Dokumentacja</h3>
+                    <p>
+                        Opinie i zaświadczenia wydajemy w terminie do 14 dni
+                        roboczych od zlecenia i oplaty.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Search & Filter -->
+            <div class="filter-section">
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Czego szukasz? Np. 'terapia', 'sąd', 'dzieci', 'online'..."
+                    />
+                </div>
+
+                <div class="filter-tabs">
+                    {
+                        filters.map((filter) => (
+                            <button
+                                class={`filter-btn ${filter.value === "all" ? "active" : ""}`}
+                                data-filter={filter.value}
+                            >
+                                {filter.label}
+                            </button>
+                        ))
+                    }
+                </div>
+
+                <p id="resultsCount" class="results-count" aria-live="polite">
+                </p>
+                <div id="noResults" class="no-results" hidden>
+                    Brak wyników. Zmień filtr albo spróbuj innej frazy.
+                </div>
+            </div>
+
+            <!-- Pricing Categories -->
+            <div id="pricing-grid" class="pricing-grid">
+                {
+                    pricingItems.map((item) => (
+                        <div
+                            class="pricing-card"
+                            data-categories={JSON.stringify(item.categories)}
+                            data-tags={item.tags.join(" ")}
+                            data-title={item.title.toLowerCase()}
+                            data-desc={item.description.toLowerCase()}
+                            data-subcategory={item.subcategory.toLowerCase()}
+                        >
+                            <div class="card-header">
+                                <div class="header-top">
+                                    <span class="category-badge">
+                                        {item.subcategory}
+                                    </span>
+                                    <span class="icon">{item.icon}</span>
+                                </div>
+                                <h3>{item.title}</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>{item.description}</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="duration">{item.duration}</span>
+                                <span class="price">
+                                    {`${item.pricePrefix || ""}${item.price} zł`}
+                                </span>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Gotowy na pierwszy krok?</h2>
+                <p>
+                    Skontaktuj się z nami, aby umówić wizytę w dogodnym dla
+                    Ciebie terminie.
+                </p>
+                <a
+                    href="https://rejestracja.psychopedagog.org/#/booking"
+                    class="btn btn-primary btn-lg">Umów wizytę online</a
+                >
+            </div>
+        </section>
+    </main>
+
+    <Footer lang="pl" />
+</Layout>
+
+<script>
+    // @ts-nocheck
+    const searchInput = document.getElementById("searchInput");
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".pricing-card");
+    const resultsCount = document.getElementById("resultsCount");
+    const noResults = document.getElementById("noResults");
+
+    let currentFilter = "all";
+    let searchQuery = "";
+
+    const normalize = (s) =>
+        (s || "")
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, ""); // usuwa polskie znaki
+
+    function getCategories(el) {
+        try {
+            return JSON.parse(el.dataset.categories || "[]");
+        } catch {
+            return [];
+        }
+    }
+
+    function filterItems() {
+        let visible = 0;
+
+        cards.forEach((card) => {
+            const el = card;
+
+            const categories = getCategories(el);
+            const tags = normalize(el.dataset.tags);
+            const title = normalize(el.dataset.title);
+            const desc = normalize(el.dataset.desc);
+            const subcategory = normalize(el.dataset.subcategory);
+            const categoriesText = normalize(categories.join(" "));
+
+            const q = normalize(searchQuery);
+
+            const matchesFilter =
+                currentFilter === "all" || categories.includes(currentFilter);
+
+            const matchesSearch =
+                q.length === 0 ||
+                title.includes(q) ||
+                tags.includes(q) ||
+                desc.includes(q) ||
+                subcategory.includes(q) ||
+                categoriesText.includes(q);
+
+            const show = matchesFilter && matchesSearch;
+
+            if (show) {
+                visible += 1;
+                el.classList.remove("is-hidden");
+            } else {
+                el.classList.add("is-hidden");
+            }
+        });
+
+        if (resultsCount) resultsCount.textContent = `Znaleziono: ${visible}`;
+
+        if (noResults) {
+            noResults.hidden = visible !== 0;
+        }
+    }
+
+    // init
+    filterItems();
+
+    // filters
+    filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            currentFilter = btn.dataset.filter || "all";
+            filterItems();
+        });
+    });
+
+    // search
+    if (searchInput && searchInput.tagName === "INPUT") {
+        searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value || "";
+            filterItems();
+        });
+    }
+</script>
+
+<style>
+    .pricing-page {
+        background-color: var(--color-bg-body);
+        min-height: 100vh;
+        padding-bottom: 4rem;
+    }
+
+    .page-header {
+        background-color: var(--color-bg-alt);
+        padding: 3rem 0;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 0.2rem;
+    }
+
+    .legal-note {
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+        margin-bottom: 1rem;
+    }
+
+    .date {
+        font-weight: 600;
+    }
+
+    .disclaimer-alert {
+        background: var(--color-bg-card);
+        border-left: 4px solid var(--color-primary);
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-sm);
+        color: var(--color-text-light);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Search & Filters */
+    .filter-section {
+        margin-bottom: 3rem;
+    }
+
+    .search-box {
+        margin-bottom: 1.5rem;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background: var(--color-bg-card);
+        border: 2px solid var(--color-bg-alt);
+        border-radius: var(--radius-full);
+        font-size: 1rem;
+        transition: all 0.3s;
+        outline: none;
+    }
+
+    .search-box input:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(220, 88, 42, 0.1);
+    }
+
+    .filter-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .filter-btn {
+        background: var(--color-bg-card);
+        border: 1px solid #e0e0e0;
+        padding: 0.5rem 1.2rem;
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        font-family: var(--font-body);
+        font-weight: 500;
+        color: var(--color-text);
+        transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+        background: var(--color-primary-light);
+        border-color: var(--color-primary-light);
+    }
+
+    .filter-btn.active {
+        background: var(--color-primary);
+        color: white;
+        border-color: var(--color-primary);
+    }
+
+    /* Pricing Grid */
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .pricing-card {
+        background: var(--color-bg-card);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition:
+            transform 0.3s,
+            opacity 0.3s;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: var(--shadow-md);
+    }
+
+    .card-header {
+        margin-bottom: 1rem;
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+    }
+
+    .category-badge {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--color-text-light);
+        font-weight: 600;
+        display: block;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .card-header h3 {
+        font-size: 1.25rem;
+        color: var(--color-primary);
+        margin: 0;
+    }
+
+    .card-body {
+        flex-grow: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-body p {
+        color: var(--color-text);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 1rem;
+    }
+
+    .duration {
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+        background: var(--color-bg-alt);
+        padding: 0.2rem 0.6rem;
+        border-radius: var(--radius-sm);
+    }
+
+    .price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--color-text);
+    }
+
+    /* CTA */
+    .cta-section {
+        background: var(--color-primary);
+        color: white;
+        text-align: center;
+        padding: 3rem 0;
+        margin-top: 3rem;
+        border-radius: var(--radius-lg);
+    }
+
+    .cta-section h2 {
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+
+    .cta-section p {
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+    }
+
+    .btn-lg {
+        background: white;
+        color: var(--color-primary);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+    }
+
+    .rules-panel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: var(--color-bg-alt);
+        border-radius: var(--radius-md);
+        text-align: center;
+    }
+
+    .rule-item h3 {
+        font-size: 1.1rem;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .rule-item p {
+        font-size: 0.9rem;
+        color: var(--color-text);
+        margin: 0;
+    }
+
+    .pricing-card.is-hidden {
+        display: none !important;
+    }
+
+    .results-count {
+        margin: 0.5rem 0 1rem;
+        color: var(--color-text-light);
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .no-results {
+        text-align: center;
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        background: var(--color-bg-card);
+        box-shadow: var(--shadow-sm);
+        color: var(--color-text);
+        margin-bottom: 1rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .pricing-card,
+        .pricing-card:hover {
+            transition: none !important;
+            transform: none !important;
+        }
+    }
+</style>

@@ -1,0 +1,522 @@
+---
+import { Image } from "astro:assets";
+import logoImg from "../assets/logo.png";
+
+interface Props {
+  lang: "pl" | "en";
+}
+
+const { lang } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navItems =
+  lang === "pl"
+    ? [
+        {
+          href: "/",
+          label: "Start",
+          icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+        },
+        {
+          href: "/uslugi",
+          label: "Usługi",
+          icon: "M13 10V3L4 14h7v7l9-11h-7z",
+        }, // Lightning/Energy
+        {
+          href: "/nasze-akcje",
+          label: "Nasze akcje",
+          icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+        }, // Heart
+        {
+          href: "https://lib.psychcon.org",
+          label: "Biblioteka Wiedzy",
+          icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+        }, // Book
+        {
+          href: "/cennik",
+          label: "Cennik",
+          icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+        }, // Coin
+        {
+          href: "/kontakt",
+          label: "Kontakt",
+          icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+        }, // Mail
+        {
+          href: "/partnerzy",
+          label: "Partnerzy",
+          icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        }, // Users/Partners
+        {
+          href: "/kariera",
+          label: "Aplikuj",
+          accent: true,
+          icon: "M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z",
+        }, // User Plus
+      ]
+    : [
+        {
+          href: "/en",
+          label: "Home",
+          icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+        },
+        {
+          href: "/en/services",
+          label: "Services",
+          icon: "M13 10V3L4 14h7v7l9-11h-7z",
+        },
+        {
+          href: "/en/projects",
+          label: "Projects",
+          icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+        },
+        {
+          href: "https://lib.psychcon.org",
+          label: "Knowledge Library",
+          icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+        },
+        {
+          href: "/en/pricing",
+          label: "Pricing",
+          icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+        },
+        {
+          href: "/en/contact",
+          label: "Contact",
+          icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+        },
+        {
+          href: "/en/partners",
+          label: "Partners",
+          icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        },
+        {
+          href: "/en/careers",
+          label: "Join Us",
+          accent: true,
+          icon: "M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z",
+        },
+      ];
+
+import { getAlternateLink } from "../utils/i18n";
+
+const { path: switchLink } = getAlternateLink(currentPath, lang);
+const switchLabel = lang === "pl" ? "English" : "Polski";
+---
+
+<header class="header">
+  <div class="container header-container">
+    <div class="logo">
+      <a href={lang === "pl" ? "/" : "/en"} class="logo-link">
+        <Image
+          src={logoImg}
+          alt="TPP Bolesławiec Logo"
+          width={50}
+          densities={[1.5, 2]}
+          loading="eager"
+        />
+        <div class="logo-text">
+          <span class="main"
+            >{lang === "pl" ? "Towarzystwo" : "Psychopedagogical"}</span
+          >
+          <span class="sub"
+            >{lang === "pl" ? "Psychopedagogiczne" : "Association"}</span
+          >
+        </div>
+      </a>
+    </div>
+
+    <div class="header-actions">
+      <button id="menu-btn" class="menu-btn" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="fullscreen-menu" class="fullscreen-menu">
+  <nav class="fullscreen-nav">
+    <ul class="nav-list">
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class={item.accent ? "btn btn-primary nav-item" : "nav-item"}
+            >
+              {item.icon && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d={item.icon} />
+                </svg>
+              )}
+              <span class="nav-label">{item.label}</span>
+            </a>
+          </li>
+        ))
+      }
+      <li class="lang-switch-item">
+        <a
+          href={switchLink}
+          class="lang-switch"
+          data-lang={lang === "pl" ? "en" : "pl"}
+        >
+          <span class="flag">{lang === "pl" ? "🇬🇧" : "🇵🇱"}</span>
+          <span class="nav-label">{switchLabel}</span>
+        </a>
+      </li>
+      <li class="theme-switch-item">
+        <button
+          id="theme-toggle"
+          class="theme-toggle menu-theme-toggle"
+          aria-label="Toggle Theme"
+        >
+          <svg
+            class="icon-sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><circle cx="12" cy="12" r="5"></circle><line
+              x1="12"
+              y1="1"
+              x2="12"
+              y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line
+              x1="4.22"
+              y1="4.22"
+              x2="5.64"
+              y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"
+            ></line><line x1="1" y1="12" x2="3" y2="12"></line><line
+              x1="21"
+              y1="12"
+              x2="23"
+              y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"
+            ></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg
+          >
+          <svg
+            class="icon-moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+            ></path></svg
+          >
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const fullscreenMenu = document.getElementById("fullscreen-menu");
+  const navLinks = document.querySelectorAll(".nav-item");
+
+  if (menuBtn && fullscreenMenu) {
+    const toggleMenu = () => {
+      menuBtn.classList.toggle("active");
+      fullscreenMenu.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
+    };
+
+    menuBtn.addEventListener("click", toggleMenu);
+
+    // Close menu when clicking a link
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (fullscreenMenu.classList.contains("active")) {
+          toggleMenu();
+        }
+      });
+    });
+  }
+
+  // Language Switch Logic - persist preference
+  const langLink = document.querySelector(".lang-switch");
+  if (langLink) {
+    langLink.addEventListener("click", (e) => {
+      const href = (e.currentTarget as HTMLElement).getAttribute("href");
+      const targetLang = href && href.startsWith("/en") ? "en" : "pl";
+      localStorage.setItem("lang", targetLang);
+    });
+  }
+
+  // Theme Toggle Logic
+  const themeToggle = document.getElementById("theme-toggle");
+
+  if (themeToggle) {
+    // Sync initial icon state
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    if (currentTheme === "dark") {
+      themeToggle.classList.add("dark");
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const html = document.documentElement;
+      const newTheme =
+        html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      themeToggle.classList.toggle("dark");
+    });
+  }
+</script>
+
+<style>
+  .header {
+    background: var(--color-bg-header);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1010;
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-sm) 0;
+  }
+
+  :global(body.no-scroll) {
+    overflow: hidden;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1001; /* Above menu */
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .logo-text .main {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .logo-text .sub {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text);
+    opacity: 0.8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Hamburger Button - Visible Always */
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: block;
+    z-index: 1002;
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-text);
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text);
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+  .hamburger::after {
+    bottom: -8px;
+  }
+
+  .menu-btn.active .hamburger {
+    background: transparent;
+  }
+  .menu-btn.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .menu-btn.active .hamburger::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  /* Fullscreen Menu */
+  .fullscreen-menu {
+    position: fixed;
+    inset: 0;
+    background: var(--color-bg-header);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 100px;
+    padding-bottom: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .fullscreen-menu.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .nav-item {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-item:hover {
+    color: var(--color-primary);
+  }
+
+  .nav-icon {
+    width: 28px;
+    height: 28px;
+    opacity: 0.8;
+  }
+
+  .nav-item:hover .nav-icon {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.2s;
+  }
+
+  .nav-item.btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    margin-top: 1rem;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Theme Toggle */
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+
+  .menu-theme-toggle {
+    border: 1px solid #ddd;
+    width: 44px;
+    height: 44px;
+    margin-top: 0.5rem;
+  }
+
+  .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .icon-sun,
+  .icon-moon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.5s ease;
+  }
+
+  /* Logic for showing/hiding icons based on class */
+  .theme-toggle .icon-moon {
+    display: none;
+  }
+  .theme-toggle .icon-sun {
+    display: block;
+  }
+
+  /* When dark mode is active (button has .dark class) */
+  .theme-toggle.dark .icon-moon {
+    display: block;
+  }
+  .theme-toggle.dark .icon-sun {
+    display: none;
+  }
+</style>

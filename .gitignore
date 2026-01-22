@@ -1,7 +1,14 @@
-/*
-!/dist/
-!/.gitignore
-!/package.json
+# Zależności i foldery tymczasowe
 node_modules/
 .astro/
 .vscode/
+.DS_Store
+
+# Folder wynikowy (build) - NIE chcemy go w głównym repozytorium kodu,
+# bo on i tak leci osobnym kanałem przez "npm run deploy"
+dist/
+
+# Logi błędów
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

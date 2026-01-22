@@ -1,0 +1,167 @@
+---
+interface Props {
+  lang: "pl" | "en";
+}
+
+const { lang } = Astro.props;
+
+// Icons as components or strings? Using inline SVG for simplicity and performance.
+const icons = {
+  counselling: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 9.5V5.5C4.5 3.29 6.29 1.5 8.5 1.5H15.5C17.71 1.5 19.5 3.29 19.5 5.5V9.5C19.5 11.71 17.71 13.5 15.5 13.5H13L12 16.5L11 13.5H8.5C6.29 13.5 4.5 11.71 4.5 9.5Z" /><path d="M12 16.5V22.5" /><path d="M8 22.5H16" /></svg>`, // Speech bubble / Support
+  family: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>`, // Group/Family
+  expert: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`, // Layers/Docs/Scale equivalent (Professionalism) OR Scale below
+  kiting: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c7.2 0 9 18 9 18s-1.8-18-9-18-9 18-9 18 1.8-18 9-18z"/></svg>`, // Leaf/Growth
+  psychopedagogy: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>`,
+};
+
+const scaleIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M7 6v12"/><path d="M17 6v12"/><path d="M5 18h4"/><path d="M15 18h4"/><path d="M12 3v3"/></svg>`; // Classic Scale
+
+const services =
+  lang === "pl"
+    ? [
+        {
+          title: "Indywidualny Plan Wsparcia (Counselling)",
+          desc: "Praktyczne wsparcie i trening umiejętności: stres, napięcie, zamartwianie, przeciążenie, spadek nastroju. Cele, plan działania i narzędzia do użycia na co dzień (CBT/TSR w formule poradniczej).",
+          icon: icons.counselling,
+        },
+        {
+          title: "Wsparcie psychopedagogiczne",
+          desc: "Spotkania edukacyjno-rozwojowe: regulacja emocji, komunikacja, relacje, funkcjonowanie szkolne. Praca na celach i konkretnych umiejętnościach.",
+          icon: icons.psychopedagogy,
+        },
+        {
+          title: "Wsparcie Rodziny i Par (Counselling)",
+          desc: "Komunikacja, granice, konflikty i odbudowa współpracy. Praktyczny trening relacji i wspólne wypracowanie zasad, które da się wdrożyć między spotkaniami.",
+          icon: icons.family,
+        },
+        {
+          title: "Raporty i Opinie Psychospołeczne (opinie prywatne)",
+          desc: "Dokumenty do celów prywatnych i okołosądowych: opis sytuacji, funkcjonowania i rekomendacje działań. Uwaga: opinia prywatna nie zastępuje opinii biegłego powołanego przez sąd.",
+          icon: scaleIcon,
+        },
+        {
+          title: "Rozwój Dziecka (TUS, wsparcie sensoryczne)",
+          desc: "Trening Umiejętności Społecznych (TUS) oraz ćwiczenia wspierające regulację i funkcjonowanie. Bez etykietowania — w przyjaznej, rozwojowej formule dla dziecka i rodzica.",
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>`,
+        },
+      ]
+    : [
+        {
+          title: "Individual Support Plan (Counselling)",
+          desc: "Practical support and skills training for stress, tension, worry, overload, and mood dips. Clear goals, an action plan, and everyday tools (CBT/SFBT in a counselling framework).",
+          icon: icons.counselling,
+        },
+        {
+          title: "Psychopedagogical Support",
+          desc: "Educational and developmental meetings: emotion regulation, communication, school functioning. Goal-based work focused on practical skills.",
+          icon: icons.psychopedagogy,
+        },
+        {
+          title: "Family & Couples Support (Counselling)",
+          desc: "Communication, boundaries, conflict, and rebuilding cooperation. Practical relationship work with steps you can implement between sessions.",
+          icon: icons.family,
+        },
+        {
+          title: "Psychosocial Reports (private opinions)",
+          desc: "Documents for private and court-related contexts: situation overview, functioning summary, and recommendations. Note: a private opinion is not the same as a court-appointed expert report.",
+          icon: scaleIcon,
+        },
+        {
+          title: "Child Development (Social Skills & Sensory Support)",
+          desc: "Social Skills Training and supportive activities for regulation and daily functioning. No labelling—development-focused work for the child and parent.",
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>`,
+        },
+      ];
+
+const sectionTitle =
+  lang === "pl"
+    ? "Wsparcie psychospołeczne (Counselling) i pedagogiczne"
+    : "Psychosocial Support (Counselling) & Education";
+
+const sectionSub =
+  lang === "pl"
+    ? "Bolesławiec i online — praktyczne narzędzia, jasny plan, realna zmiana"
+    : "Bolesławiec & online — practical tools, a clear plan, real change";
+---
+
+<section id="services" class="section services">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>{sectionTitle}</h2>
+      <p class="subtitle">{sectionSub}</p>
+    </div>
+
+    <div class="grid grid-2 services-grid">
+      {
+        services.map((service) => (
+          <div class="card animate-fade-in">
+            <div class="icon-wrapper" set:html={service.icon} />
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    background-color: transparent;
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .subtitle {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+  }
+
+  .card {
+    background: var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-light);
+    background: var(--color-bg-card);
+  }
+
+  .icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+  }
+
+  /* Target the SVG elements inserted via set:html */
+  .icon-wrapper :global(svg) {
+    width: 32px;
+    height: 32px;
+    stroke-width: 1.5;
+  }
+
+  h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+    font-size: 1.25rem; /* Smaller on mobile */
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
