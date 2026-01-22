@@ -1,0 +1,298 @@
+/* Font import moved to Layout.astro for performance */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors - Warm Professional (Orange/Clay Theme) */
+  /* Primary: Deep Burnt Orange / Terracotta - Professional & Warm */
+  /* Darkened from 45% lightness to 40% for AA contrast compliance */
+  --color-primary: hsl(25, 80%, 40%);
+  --color-primary-light: hsl(25, 90%, 92%);
+  --color-primary-dark: hsl(25, 85%, 35%);
+
+  /* Secondary: Warm Neutral / Beige */
+  --color-secondary: hsl(35, 30%, 97%);
+  --color-secondary-dark: hsl(35, 20%, 90%);
+
+  /* Accent: Vibrant Tangerine for CTAs */
+  /* Darkened from 48% to 45% for better contrast */
+  --color-accent: hsl(30, 95%, 45%);
+
+  /* Text */
+  --color-text: hsl(215, 25%, 27%);
+  /* Darkened from 50% to 40% for better readability */
+  --color-text-light: hsl(215, 15%, 40%);
+  --color-white: #ffffff;
+  --color-success: hsl(150, 60%, 45%);
+
+  /* Semantic Backgrounds */
+  --color-bg-body: var(--color-secondary);
+  --color-bg-card: #ffffff;
+  --color-bg-header: rgba(255, 255, 255, 0.95);
+  --color-bg-footer: var(--color-text);
+  --color-bg-alt: var(--color-secondary);
+
+
+  /* Animations - Subtle & Premium */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    /* hidden by default, JS will add .visible */
+  }
+
+  .fade-in.visible {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  /* Typography */
+  --font-heading: 'Poppins',
+  sans-serif;
+  --font-body: 'Poppins',
+  sans-serif;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode Overrides */
+  --color-primary: hsl(25, 80%, 55%);
+  /* Brighter for contrast */
+  --color-primary-light: hsl(25, 40%, 25%);
+  --color-primary-dark: hsl(25, 80%, 75%);
+
+  --color-secondary: hsl(220, 20%, 16%);
+  /* Dark card bg */
+  --color-secondary-dark: hsl(220, 20%, 12%);
+  /* Darker bg */
+
+  --color-text: hsl(35, 20%, 92%);
+  --color-text-light: hsl(215, 15%, 70%);
+
+  --color-bg-body: hsl(220, 25%, 12%);
+  /* Main dark background */
+
+  --color-bg-header: rgba(23, 29, 38, 0.95);
+  --color-bg-card: var(--color-secondary);
+  --color-bg-alt: var(--color-secondary-dark);
+  --color-bg-footer: hsl(220, 25%, 10%);
+  /* Explicit dark footer */
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5),
+    0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn-accent:hover {
+  background-color: hsl(30, 95%, 48%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Grid Helper */
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}

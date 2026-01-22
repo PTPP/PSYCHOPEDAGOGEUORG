@@ -1,0 +1,248 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "Polityka Prywatności | Towarzystwo Psychopedagogiczne";
+const description =
+    "Polityka prywatności Towarzystwa Psychopedagogicznego. Zasady przetwarzania danych osobowych, RODO, prawa użytkownika.";
+---
+
+<Layout title={title} description={description} lang="pl">
+    <Header lang="pl" />
+
+    <main class="page-container">
+        <div class="container animate-fade-in">
+            <header class="page-header">
+                <h1>Polityka Prywatności</h1>
+                <p class="subtitle">Towarzystwa Psychopedagogicznego (TPP)</p>
+                <p class="meta">Obowiązuje od: 01.01.2026</p>
+            </header>
+
+            <div class="content">
+                <section>
+                    <h2>I. Postanowienia ogólne</h2>
+                    <p>
+                        Niniejsza Polityka prywatności wyjaśnia zasady
+                        gromadzenia i przetwarzania danych osobowych
+                        Użytkowników i Klientów Towarzystwa
+                        Psychopedagogicznego. Dokument został opracowany w
+                        oparciu o RODO (GDPR) oraz przepisy prawa polskiego.
+                    </p>
+                    <div class="alert-box">
+                        <p>
+                            <strong>⚠️ Ważne:</strong> Usługi świadczone przez TPP
+                            mają charakter poradnictwa psychospołecznego, edukacji
+                            i wsparcia (counselling). Nie stanowią świadczeń zdrowotnych
+                            w rozumieniu ustawy o działalności leczniczej, dlatego
+                            gromadzone dane nie są "dokumentacją medyczną", lecz dokumentacją
+                            wsparcia klienta.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>II. Administrator danych</h2>
+                    <p>
+                        Administratorem danych jest <strong
+                            >Towarzystwo Psychopedagogiczne</strong
+                        > z siedzibą w Bolesławcu (59‑700) przy ul. Warszawskiej 1/3,
+                        KRS: 0000586474, NIP: 6121856217.
+                    </p>
+                    <p>
+                        Kontakt: <a href="mailto:rodo@psychopedagog.org"
+                            >rodo@psychopedagog.org</a
+                        > lub tel. <a href="tel:+48733379538"
+                            >(+48) 733 379 538</a
+                        >.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>II. Zakres i cel danych</h2>
+                    <p>
+                        Przetwarzamy dane niezbędne do realizacji usług
+                        counsellingu i szkoleń:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Dane identyfikacyjne:</strong> Imię, nazwisko,
+                            PESEL (do faktur), kontakt.
+                        </li>
+                        <li>
+                            <strong>Dane wrażliwe (art. 9 RODO):</strong> Informacje
+                            o sytuacji życiowej, rodzinnej, nastroju i potrzebach
+                            wsparcia – przetwarzane wyłącznie na podstawie Twojej
+                            wyraźnej zgody (zawarcie kontraktu na wsparciu) w celu
+                            realizacji usługi.
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Cel:</strong> Realizacja umowy (wsparcie, opinie,
+                        szkolenia), księgowość oraz obrona przed roszczeniami.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>IV. Okres przechowywania</h2>
+                    <p>
+                        Nie stosujemy terminów dla dokumentacji medycznej (20
+                        lat), gdyż nie jesteśmy podmiotem leczniczym.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Notatki z sesji / Opinie:</strong> Przechowywane
+                            przez okres 2 lat od zakończenia współpracy (okres przedawnienia
+                            ewentualnych roszczeń cywilnych).
+                        </li>
+                        <li>
+                            <strong>Dokumenty finansowe:</strong> 5 lat od końca roku
+                            podatkowego (wymogi skarbowe).
+                        </li>
+                    </ul>
+                    <p>
+                        Po tym czasie dane są trwale usuwane lub anonimizowane.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>V. Odbiorcy i Transfer (Australia)</h2>
+                    <p>
+                        Dostęp do danych mają upoważnieni współpracownicy
+                        (Counsellorzy), księgowość oraz dostawcy IT (wFirma,
+                        Google, Microsoft).
+                    </p>
+                    <p>
+                        <strong>Transfer poza EOG:</strong> W związku ze współpracą
+                        szkoleniową i certyfikacyjną, Twoje dane (imię, nazwisko,
+                        status ukończenia kursu) mogą być przekazywane do podmiotu
+                        partnerskiego w Australii. Transfer ten jest niezbędny do
+                        wykonania umowy (certyfikacja) lub oparty na Standardowych
+                        Klauzulach Umownych (SCC) zatwierdzonych przez KE.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>VI. Prawa Użytkownika</h2>
+                    <p>
+                        Masz prawo do: dostępu do danych, ich sprostowania,
+                        usunięcia ("prawo do bycia zapomnianym" – jeśli nie
+                        koliduje to z obowiązkiem podatkowym lub obroną
+                        roszczeń), oraz ograniczenia przetwarzania. Skargi można
+                        wnosić do Prezesa UODO.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>VII. Cookies i Bezpieczeństwo</h2>
+                    <p>
+                        Strona używa plików cookies do celów statystycznych i
+                        funkcjonalnych. Stosujemy szyfrowanie SSL oraz procedury
+                        ochrony danych zgodne z RODO.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <Footer lang="pl" />
+</Layout>
+
+<style>
+    .page-container {
+        padding: 8rem 0 4rem;
+        min-height: 80vh;
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        color: var(--color-text-light);
+        margin-bottom: 1rem;
+    }
+
+    .meta {
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+        opacity: 0.8;
+    }
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        background: var(--color-bg-card);
+        padding: 3rem;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+    }
+
+    section {
+        margin-bottom: 2.5rem;
+    }
+
+    section:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        color: var(--color-primary);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-bg-alt);
+    }
+
+    p,
+    li {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        color: var(--color-text);
+    }
+
+    ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    .alert-box {
+        background: var(--color-bg-alt);
+        padding: 1.5rem;
+        border-radius: var(--radius-md);
+        border-left: 4px solid var(--color-accent);
+        margin: 1.5rem 0;
+    }
+
+    .alert-box p {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: var(--color-primary);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    a:hover {
+        color: var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            padding: 1.5rem;
+        }
+    }
+</style>
