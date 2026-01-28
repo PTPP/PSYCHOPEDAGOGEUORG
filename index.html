@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pl" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><link rel="canonical" href="https://www.psychopedagog.org/"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="description" content="Profesjonalna pomoc psychologa i pedagoga w Bolesławcu. Counselling, TUS, wsparcie w kryzysie i opinie prywatne. Umów wizytę online lub stacjonarnie."><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="generator" content="Astro v5.16.5"><title>Psycholog i Pedagog Bolesławiec | Towarzystwo Psychopedagogiczne - Counselling</title><!-- Hreflang Tags --><link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/"><link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en"><link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/"><!-- Fonts (Optimized) --><!-- Fonts are now loaded locally via global.css --><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://www.psychopedagog.org/"><meta property="og:title" content="Psycholog i Pedagog Bolesławiec | Towarzystwo Psychopedagogiczne - Counselling"><meta property="og:description" content="Profesjonalna pomoc psychologa i pedagoga w Bolesławcu. Counselling, TUS, wsparcie w kryzysie i opinie prywatne. Umów wizytę online lub stacjonarnie."><meta property="og:image" content="https://www.psychopedagog.org/og.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.psychopedagog.org/"><meta property="twitter:title" content="Psycholog i Pedagog Bolesławiec | Towarzystwo Psychopedagogiczne - Counselling"><meta property="twitter:description" content="Profesjonalna pomoc psychologa i pedagoga w Bolesławcu. Counselling, TUS, wsparcie w kryzysie i opinie prywatne. Umów wizytę online lub stacjonarnie."><meta property="twitter:image" content="https://www.psychopedagog.org/og.png"><!-- Schema.org JSON-LD --><script type="application/ld+json">
+<!DOCTYPE html><html lang="pl" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><link rel="canonical" href="https://www.psychopedagog.org/"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="description" content="Profesjonalne wsparcie psychopedagogiczne w Bolesławcu. Terapia dzieci i młodzieży, counselling, TUS oraz pomoc w kryzysie. Umów wizytę online lub stacjonarnie."><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="generator" content="Astro v5.16.5"><title>Towarzystwo Psychopedagogiczne - Psycholog i Pedagog Bolesławiec</title><!-- Hreflang Tags --><link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/"><link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en"><link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/"><!-- Fonts (Optimized) --><!-- Fonts are now loaded locally via global.css --><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://www.psychopedagog.org/"><meta property="og:title" content="Towarzystwo Psychopedagogiczne - Psycholog i Pedagog Bolesławiec"><meta property="og:description" content="Profesjonalne wsparcie psychopedagogiczne w Bolesławcu. Terapia dzieci i młodzieży, counselling, TUS oraz pomoc w kryzysie. Umów wizytę online lub stacjonarnie."><meta property="og:image" content="https://www.psychopedagog.org/og.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.psychopedagog.org/"><meta property="twitter:title" content="Towarzystwo Psychopedagogiczne - Psycholog i Pedagog Bolesławiec"><meta property="twitter:description" content="Profesjonalne wsparcie psychopedagogiczne w Bolesławcu. Terapia dzieci i młodzieży, counselling, TUS oraz pomoc w kryzysie. Umów wizytę online lub stacjonarnie."><meta property="twitter:image" content="https://www.psychopedagog.org/og.png"><!-- Schema.org JSON-LD --><script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
 				"@type": "MedicalBusiness",
@@ -90,18 +90,15 @@
 			const theme = savedTheme || systemTheme;
 			document.documentElement.setAttribute("data-theme", theme);
 
-			// 2. Language Detection (Root path only)
+			// 2. Language Preference (Root path only) - Optional: save preference but don't force redirect
+			// We rely on hreflang for SEO, auto-redirects can confuse crawlers.
 			if (
 				window.location.pathname === "/" ||
 				window.location.pathname === "/index.html"
 			) {
 				const savedLang = localStorage.getItem("lang");
-				const userLang = navigator.language || navigator.userLanguage;
-
 				if (savedLang === "en") {
-					window.location.href = "/en";
-				} else if (!savedLang && userLang.startsWith("en")) {
-					// Detect English browser and no preference -> redirect
+					// Only redirect if the user explicitly chose English previously
 					window.location.href = "/en";
 				}
 			}

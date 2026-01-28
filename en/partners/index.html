@@ -90,18 +90,15 @@
 			const theme = savedTheme || systemTheme;
 			document.documentElement.setAttribute("data-theme", theme);
 
-			// 2. Language Detection (Root path only)
+			// 2. Language Preference (Root path only) - Optional: save preference but don't force redirect
+			// We rely on hreflang for SEO, auto-redirects can confuse crawlers.
 			if (
 				window.location.pathname === "/" ||
 				window.location.pathname === "/index.html"
 			) {
 				const savedLang = localStorage.getItem("lang");
-				const userLang = navigator.language || navigator.userLanguage;
-
 				if (savedLang === "en") {
-					window.location.href = "/en";
-				} else if (!savedLang && userLang.startsWith("en")) {
-					// Detect English browser and no preference -> redirect
+					// Only redirect if the user explicitly chose English previously
 					window.location.href = "/en";
 				}
 			}

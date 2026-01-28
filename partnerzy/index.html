@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pl" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><link rel="canonical" href="https://www.psychopedagog.org/partnerzy/"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="description" content="Nasi partnerzy. Towarzystwo Psychopedagogiczne w Bolesławcu współpracuje z zaufanymi organizacjami."><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="generator" content="Astro v5.16.5"><title>Partnerzy | Psycholog Bolesławiec - Towarzystwo Psychopedagogiczne</title><!-- Hreflang Tags --><link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/partnerzy/"><link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/partners"><!-- Fonts (Optimized) --><!-- Fonts are now loaded locally via global.css --><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://www.psychopedagog.org/partnerzy/"><meta property="og:title" content="Partnerzy | Psycholog Bolesławiec - Towarzystwo Psychopedagogiczne"><meta property="og:description" content="Nasi partnerzy. Towarzystwo Psychopedagogiczne w Bolesławcu współpracuje z zaufanymi organizacjami."><meta property="og:image" content="https://www.psychopedagog.org/og.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.psychopedagog.org/partnerzy/"><meta property="twitter:title" content="Partnerzy | Psycholog Bolesławiec - Towarzystwo Psychopedagogiczne"><meta property="twitter:description" content="Nasi partnerzy. Towarzystwo Psychopedagogiczne w Bolesławcu współpracuje z zaufanymi organizacjami."><meta property="twitter:image" content="https://www.psychopedagog.org/og.png"><!-- Schema.org JSON-LD --><script type="application/ld+json">
+<!DOCTYPE html><html lang="pl" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><link rel="canonical" href="https://www.psychopedagog.org/partnerzy/"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="description" content="Poznaj naszych partnerów. Współpracujemy z zaufanymi organizacjami w Bolesławcu i za granicą (TDP, Hobweek) w obszarze counsellingu i wsparcia."><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="generator" content="Astro v5.16.5"><title>Partnerzy | Towarzystwo Psychopedagogiczne Bolesławiec</title><!-- Hreflang Tags --><link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/partnerzy/"><link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/partners"><!-- Fonts (Optimized) --><!-- Fonts are now loaded locally via global.css --><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://www.psychopedagog.org/partnerzy/"><meta property="og:title" content="Partnerzy | Towarzystwo Psychopedagogiczne Bolesławiec"><meta property="og:description" content="Poznaj naszych partnerów. Współpracujemy z zaufanymi organizacjami w Bolesławcu i za granicą (TDP, Hobweek) w obszarze counsellingu i wsparcia."><meta property="og:image" content="https://www.psychopedagog.org/og.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://www.psychopedagog.org/partnerzy/"><meta property="twitter:title" content="Partnerzy | Towarzystwo Psychopedagogiczne Bolesławiec"><meta property="twitter:description" content="Poznaj naszych partnerów. Współpracujemy z zaufanymi organizacjami w Bolesławcu i za granicą (TDP, Hobweek) w obszarze counsellingu i wsparcia."><meta property="twitter:image" content="https://www.psychopedagog.org/og.png"><!-- Schema.org JSON-LD --><script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
 				"@type": "MedicalBusiness",
@@ -90,18 +90,15 @@
 			const theme = savedTheme || systemTheme;
 			document.documentElement.setAttribute("data-theme", theme);
 
-			// 2. Language Detection (Root path only)
+			// 2. Language Preference (Root path only) - Optional: save preference but don't force redirect
+			// We rely on hreflang for SEO, auto-redirects can confuse crawlers.
 			if (
 				window.location.pathname === "/" ||
 				window.location.pathname === "/index.html"
 			) {
 				const savedLang = localStorage.getItem("lang");
-				const userLang = navigator.language || navigator.userLanguage;
-
 				if (savedLang === "en") {
-					window.location.href = "/en";
-				} else if (!savedLang && userLang.startsWith("en")) {
-					// Detect English browser and no preference -> redirect
+					// Only redirect if the user explicitly chose English previously
 					window.location.href = "/en";
 				}
 			}
