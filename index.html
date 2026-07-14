@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centrum Wsparcia TPP | Nowoczesny Counselling w Bolesławcu</title>
+  <title>Centrum TPP | Counselling Psychospołeczny Bolesławiec</title>
   <meta name="description" content="Praktyczny counselling psychospołeczny i pedagogiczny w Bolesławcu oraz online. Zespół specjalistów, wsparcie w kryzysie, cennik i rezerwacje.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.psychopedagog.org/">
+  <link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/">
+  <link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/">
+  <link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.psychopedagog.org/">
-  <meta property="og:title" content="Centrum Wsparcia TPP | Nowoczesny Counselling w Bolesławcu">
+  <meta property="og:title" content="Centrum TPP | Counselling Psychospołeczny Bolesławiec">
   <meta property="og:description" content="Praktyczny counselling psychospołeczny i pedagogiczny w Bolesławcu oraz online. Zespół specjalistów, wsparcie w kryzysie, cennik i rezerwacje.">
   <meta property="og:image" content="https://www.psychopedagog.org/og.png">
   <meta property="og:locale" content="pl_PL">
@@ -19,12 +22,13 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.psychopedagog.org/">
-  <meta property="twitter:title" content="Centrum Wsparcia TPP | Nowoczesny Counselling w Bolesławcu">
+  <meta property="twitter:title" content="Centrum TPP | Counselling Psychospołeczny Bolesławiec">
   <meta property="twitter:description" content="Praktyczny counselling psychospołeczny i pedagogiczny w Bolesławcu oraz online. Zespół specjalistów, wsparcie w kryzysie, cennik i rezerwacje.">
   <meta property="twitter:image" content="https://www.psychopedagog.org/og.png">
 
   <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
 
   <!-- JSON-LD Structured Data -->
@@ -216,11 +220,11 @@
 
         <!-- Desktop Nav Links -->
         <div class="hidden md:flex space-x-6 items-center">
-          <button class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent active" data-i18n="menu_start" onclick="switchTab('start')">Start</button>
-          <button class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_services" onclick="switchTab('uslugi-cennik')">Usługi i Cennik</button>
-          <button class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_spec" onclick="switchTab('specjalisci')">Specjaliści</button>
-          <button class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_faq" onclick="switchTab('faq')">FAQ</button>
-          <button class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_kontakt" onclick="switchTab('kontakt')">Kontakt</button>
+          <a href="#start" class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent active" data-i18n="menu_start" onclick="event.preventDefault();switchTab('start')">Start</a>
+          <a href="#uslugi-cennik" class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_services" onclick="event.preventDefault();switchTab('uslugi-cennik')">Usługi i Cennik</a>
+          <a href="#specjalisci" class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_spec" onclick="event.preventDefault();switchTab('specjalisci')">Specjaliści</a>
+          <a href="#faq" class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_faq" onclick="event.preventDefault();switchTab('faq')">FAQ</a>
+          <a href="#kontakt" class="nav-tab-btn text-sm font-semibold text-zinc-600 hover:text-orange-650 transition py-2 px-1 border-b-2 border-transparent" data-i18n="menu_kontakt" onclick="event.preventDefault();switchTab('kontakt')">Kontakt</a>
           <a href="https://rejestracja.psychopedagog.org/portal" target="_blank" class="text-sm font-semibold text-zinc-600 hover:text-orange-650 transition" data-i18n="menu_portal">Panel Klienta</a>
           <a href="https://rejestracja.psychopedagog.org/public/forms/" target="_blank" class="px-4 py-2 border border-accentBlue-600 text-accentBlue-600 hover:bg-accentBlue-50 rounded-xl text-sm font-semibold transition" data-i18n="menu_inst">Formularz dla Instytucji</a>
           <a href="https://rejestracja.psychopedagog.org/booking" target="_blank" class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-sm font-bold transition shadow-sm" data-i18n="menu_book">Rezerwuj</a>
@@ -260,7 +264,7 @@
             Szukasz wsparcia psychologicznego? Potrzebujesz rzetelnej dokumentacji?
           </div>
           <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-zinc-900 tracking-tight leading-tight" data-i18n="hero_title">
-            Counselling & <br><span class="text-orange-600">Programy Wsparcia</span>
+            Counselling Psychospołeczny & <br><span class="text-orange-600">Programy Wsparcia</span>
           </h1>
           <p class="text-base md:text-lg text-zinc-650 max-w-2xl mx-auto leading-relaxed" data-i18n="hero_desc">
             Tworzymy indywidualne programy wsparcia psychospołecznego, pracując z Twoimi emocjami, wyzwaniami i relacjami. Łączymy profesjonalny counselling z szacunkiem i pełną elastycznością.
@@ -269,9 +273,9 @@
             <a href="https://rejestracja.psychopedagog.org/booking" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold transition shadow-md flex items-center justify-center gap-2 text-lg" data-i18n="hero_btn_book">
               Rezerwuj wizytę online <i data-lucide="arrow-right" class="h-5 w-5"></i>
             </a>
-            <button onclick="switchTab('uslugi-cennik')" class="w-full sm:w-auto px-8 py-4 bg-white border border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 text-zinc-800 rounded-xl font-bold transition flex items-center justify-center text-lg" data-i18n="hero_btn_services">
+            <a href="#uslugi-cennik" onclick="event.preventDefault();switchTab('uslugi-cennik')" class="w-full sm:w-auto px-8 py-4 bg-white border border-zinc-200 hover:border-zinc-300 hover:bg-zinc-50 text-zinc-800 rounded-xl font-bold transition flex items-center justify-center text-lg" data-i18n="hero_btn_services">
               Zobacz cennik i usługi
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -579,11 +583,11 @@
       <div class="space-y-4">
         <h4 class="text-white font-bold text-sm uppercase tracking-wider" data-i18n="footer_nav">Nawigacja</h4>
         <ul class="space-y-2 text-xs">
-          <li><a href="#" onclick="switchTab('start')" class="hover:text-white transition" data-i18n="menu_start">Strona główna</a></li>
-          <li><a href="#" onclick="switchTab('uslugi-cennik')" class="hover:text-white transition" data-i18n="menu_services">Usługi i Cennik</a></li>
-          <li><a href="#" onclick="switchTab('specjalisci')" class="hover:text-white transition" data-i18n="menu_spec">Nasi Specjaliści</a></li>
-          <li><a href="#" onclick="switchTab('faq')" class="hover:text-white transition" data-i18n="menu_faq">FAQ</a></li>
-          <li><a href="#" onclick="switchTab('kontakt')" class="hover:text-white transition" data-i18n="menu_kontakt">Kontakt</a></li>
+          <li><a href="#start" onclick="event.preventDefault();switchTab('start')" class="hover:text-white transition" data-i18n="menu_start">Strona główna</a></li>
+          <li><a href="#uslugi-cennik" onclick="event.preventDefault();switchTab('uslugi-cennik')" class="hover:text-white transition" data-i18n="menu_services">Usługi i Cennik</a></li>
+          <li><a href="#specjalisci" onclick="event.preventDefault();switchTab('specjalisci')" class="hover:text-white transition" data-i18n="menu_spec">Nasi Specjaliści</a></li>
+          <li><a href="#faq" onclick="event.preventDefault();switchTab('faq')" class="hover:text-white transition" data-i18n="menu_faq">FAQ</a></li>
+          <li><a href="#kontakt" onclick="event.preventDefault();switchTab('kontakt')" class="hover:text-white transition" data-i18n="menu_kontakt">Kontakt</a></li>
         </ul>
       </div>
 
@@ -619,26 +623,26 @@
 
   <!-- Mobile Bottom Tab Navigation -->
   <div class="mobile-nav-bar fixed bottom-0 left-0 w-full h-[65px] bg-white border-t border-zinc-200 flex justify-around items-center z-40 md:hidden shadow-lg pb-safe">
-    <button class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium active" onclick="switchTab('start')">
+    <a href="#start" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium active" onclick="event.preventDefault();switchTab('start')">
       <i data-lucide="home" class="w-5 h-5 text-zinc-450"></i>
       <span data-i18n="menu_start">Start</span>
-    </button>
-    <button class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="switchTab('uslugi-cennik')">
+    </a>
+    <a href="#uslugi-cennik" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="event.preventDefault();switchTab('uslugi-cennik')">
       <i data-lucide="tag" class="w-5 h-5 text-zinc-450"></i>
       <span data-i18n="menu_services">Cennik</span>
-    </button>
-    <button class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="switchTab('specjalisci')">
+    </a>
+    <a href="#specjalisci" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="event.preventDefault();switchTab('specjalisci')">
       <i data-lucide="users" class="w-5 h-5 text-zinc-450"></i>
       <span data-i18n="menu_spec">Zespół</span>
-    </button>
-    <button class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="switchTab('faq')">
+    </a>
+    <a href="#faq" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="event.preventDefault();switchTab('faq')">
       <i data-lucide="help-circle" class="w-5 h-5 text-zinc-450"></i>
       <span data-i18n="menu_faq">FAQ</span>
-    </button>
-    <button class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="switchTab('kontakt')">
+    </a>
+    <a href="#kontakt" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-zinc-450 hover:text-orange-650 transition text-[10px] font-medium" onclick="event.preventDefault();switchTab('kontakt')">
       <i data-lucide="map-pin" class="w-5 h-5 text-zinc-450"></i>
       <span data-i18n="menu_kontakt">Kontakt</span>
-    </button>
+    </a>
   </div>
 
   <!-- BIOGRAPHICAL Dialog Modals Container -->
@@ -662,7 +666,7 @@
     "menu_inst": "Formularz dla Instytucji",
     "menu_book": "Rezerwuj",
     "hero_sub": "Szukasz wsparcia psychologicznego? Potrzebujesz rzetelnej dokumentacji?",
-    "hero_title": "Counselling & <br><span class=\"text-orange-600\">Programy Wsparcia</span>",
+    "hero_title": "Counselling Psychospołeczny & <br><span class=\"text-orange-600\">Programy Wsparcia</span>",
     "hero_desc": "Tworzymy indywidualne programy wsparcia psychospołecznego, pracując z Twoimi emocjami, wyzwaniami i relacjami. Łączymy profesjonalny counselling z szacunkiem i pełną elastycznością.",
     "hero_btn_book": "Rezerwuj wizytę online",
     "hero_btn_services": "Zobacz cennik i usługi",
@@ -742,7 +746,7 @@
     "menu_inst": "Form for Institutions",
     "menu_book": "Book Online",
     "hero_sub": "Looking for psychological support? Need reliable documentation?",
-    "hero_title": "Counselling & <br><span class=\"text-orange-600\">Support Programs</span>",
+    "hero_title": "Psychosocial Counselling & <br><span class=\"text-orange-600\">Support Programs</span>",
     "hero_desc": "We create individualized psychosocial support programs, working with your emotions, challenges, and relationships. We combine professional counselling with respect and full flexibility.",
     "hero_btn_book": "Book a session online",
     "hero_btn_services": "View services & pricing",
@@ -2084,21 +2088,20 @@
       if (activeTabContent) {
         activeTabContent.classList.add('active');
         
-        // Find desktop nav button
-        const navBtn = Array.from(document.querySelectorAll('.nav-tab-btn')).find(btn => {
-          return btn.getAttribute('onclick').includes(tabId);
-        });
+        // Find desktop nav link
+        const navBtn = document.querySelector('.nav-tab-btn[href="#' + tabId + '"]');
         if (navBtn) {
           navBtn.classList.add('active');
         }
 
-        // Find mobile nav button
-        const mobileBtn = Array.from(document.querySelectorAll('.mobile-nav-btn')).find(btn => {
-          return btn.getAttribute('onclick').includes(tabId);
-        });
+        // Find mobile nav link
+        const mobileBtn = document.querySelector('.mobile-nav-btn[href="#' + tabId + '"]');
         if (mobileBtn) {
           mobileBtn.classList.add('active');
         }
+        
+        // Update URL hash for bookmarkability and SEO
+        history.replaceState(null, '', '#' + tabId);
         
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
