@@ -143,40 +143,7 @@
   }
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            orange: {
-              50: '#fff7ed',
-              100: '#ffedd5',
-              200: '#fed7aa',
-              500: '#f97316',
-              600: '#ea580c',
-              700: '#c2410c',
-              850: '#7c2d12',
-              900: '#7c2d12'
-            },
-            accentBlue: {
-              50: '#ecfeff',
-              100: '#cffafe',
-              200: '#a5f3fc',
-              600: '#0891b2',
-              700: '#0e7490',
-              800: '#155e75',
-              850: '#164e63'
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            heading: ['Space Grotesk', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="assets/styles.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body {
@@ -204,6 +171,12 @@
     .mobile-nav-btn.active svg {
       stroke: #ea580c !important;
       transform: scale(1.05);
+    }
+    .filter-btn.active,
+    .filter-btn.active:hover {
+      color: #fff !important;
+      background-color: #ea580c !important;
+      border-color: #ea580c !important;
     }
   </style>
 </head>
