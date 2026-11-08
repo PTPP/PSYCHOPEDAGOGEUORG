@@ -104,7 +104,7 @@
         "name": "Czy diagnozujecie?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nie prowadzimy procesu diagnozy klinicznej jako usługi podstawowej. Jeśli podczas pracy pojawią się sygnały, że potrzebna jest diagnoza medyczna, omawiamy to z Tobą i za Twoją zgodą kierujemy do odpowiedniego lekarza psychiatry lub placówki diagnostycznej."
+          "text": "Oferujemy trzyetapową diagnostykę psychologiczną w kierunku ADHD (1500 zł: 600 zł + 600 zł + 300 zł), obejmującą wywiad, badania psychologiczne oraz raport z omówieniem wyników. Nie zastępuje ona odrębnej konsultacji psychiatrycznej i oceny medycznej, realizowanych poza Towarzystwem."
         }
       },
       {
@@ -791,6 +791,62 @@
   }
 };
     const servicesData = [
+  {
+    "cat": "counselling",
+    "cat_label": {
+      "pl": "Diagnostyka psychologiczna",
+      "en": "Psychological Assessment"
+    },
+    "title": {
+      "pl": "Diagnostyka psychologiczna w kierunku ADHD",
+      "en": "Psychological Assessment for ADHD"
+    },
+    "desc": {
+      "pl": "Trzyetapowy proces dla dzieci, młodzieży i dorosłych: wywiad kliniczny i rozwojowy, badania psychologiczne oraz raport z wynikami i rekomendacjami. Płatność osobno za każdy etap. Konsultacja psychiatryczna odbywa się w odrębnym podmiocie i nie jest objęta ceną. Dodatkowe badania i koszty wymagają wcześniejszego uzgodnienia.",
+      "en": "A three-stage process for children, adolescents and adults: clinical and developmental interview, psychological assessment, and a report with findings and recommendations. Each stage is paid for separately. Psychiatric consultation is provided by a separate medical provider and is not included. Any additional assessments and fees are agreed in advance."
+    },
+    "time": {
+      "pl": "Proces 3-etapowy",
+      "en": "3-stage process"
+    },
+    "price": {
+      "pl": "1500 zł",
+      "en": "1500 PLN"
+    },
+    "stages": [
+      {
+        "title": {
+          "pl": "Wywiad diagnostyczny",
+          "en": "Diagnostic interview"
+        },
+        "price": {
+          "pl": "600 zł",
+          "en": "600 PLN"
+        }
+      },
+      {
+        "title": {
+          "pl": "Badania psychologiczne",
+          "en": "Psychological assessment"
+        },
+        "price": {
+          "pl": "600 zł",
+          "en": "600 PLN"
+        }
+      },
+      {
+        "title": {
+          "pl": "Raport i omówienie wyników",
+          "en": "Report and feedback"
+        },
+        "price": {
+          "pl": "300 zł",
+          "en": "300 PLN"
+        }
+      }
+    ],
+    "icon_svg": "<svg fill=\"none\" height=\"22\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"22\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12 18V5a3 3 0 0 0-5.9-.8A4 4 0 0 0 4 11a4 4 0 0 0 2 7.5A3 3 0 0 0 12 18Z\"/><path d=\"M12 18V5a3 3 0 0 1 5.9-.8A4 4 0 0 1 20 11a4 4 0 0 1-2 7.5A3 3 0 0 1 12 18Z\"/></svg>"
+  },
   {
     "cat": "counselling",
     "cat_label": {
@@ -1817,8 +1873,8 @@
       "en": "Do you provide diagnoses?"
     },
     "answer": {
-      "pl": "Nie prowadzimy procesu diagnozy klinicznej jako usługi podstawowej. Jeśli podczas pracy pojawią się sygnały, że potrzebna jest diagnoza medyczna, omawiamy to z Tobą i za Twoją zgodą kierujemy do odpowiedniego lekarza psychiatry lub placówki diagnostycznej.",
-      "en": "We do not conduct the clinical diagnosis process as a primary service. If signals appear during work that a medical diagnosis is needed, we discuss this with you and, with your consent, refer you to an appropriate psychiatrist or diagnostic facility."
+      "pl": "Oferujemy trzyetapową diagnostykę psychologiczną w kierunku ADHD (1500 zł: 600 zł + 600 zł + 300 zł), obejmującą wywiad, badania psychologiczne oraz raport z omówieniem wyników. Nie zastępuje ona odrębnej konsultacji psychiatrycznej i oceny medycznej, realizowanych poza Towarzystwem.",
+      "en": "We offer a three-stage psychological assessment for ADHD (1500 PLN: 600 + 600 + 300 PLN), including an interview, psychological testing and a report with feedback. This does not replace a separate psychiatric consultation and medical assessment provided outside the Association."
     }
   },
   {
@@ -1947,6 +2003,7 @@
             </div>
             <h3 class="font-heading text-lg font-bold text-zinc-900 mb-2 leading-tight">${s.title[currentLang]}</h3>
             <p class="text-zinc-650 text-sm leading-relaxed mb-6">${s.desc[currentLang]}</p>
+            ${s.stages ? `<div class="mb-6 space-y-2" aria-label="${currentLang === 'pl' ? 'Etapy diagnostyki' : 'Assessment stages'}">${s.stages.map((stage, i) => `<div class="flex items-center justify-between gap-3 rounded-xl bg-zinc-50 px-3 py-2 text-xs"><span class="text-zinc-700">${i + 1}. ${stage.title[currentLang]}</span><strong class="shrink-0 text-zinc-900">${stage.price[currentLang]}</strong></div>`).join('')}</div>` : ''}
           </div>
           <div class="flex justify-between items-center pt-4 border-t border-zinc-100">
             <span class="price-time text-xs text-zinc-450 font-semibold">${s.time[currentLang]}</span>
