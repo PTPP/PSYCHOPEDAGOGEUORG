@@ -101,6 +101,24 @@ def check():
         can = [x.get("href") for x in doc.links if x.get("rel") == "canonical"]
         if can != [url]:
             errors.append(f"{file}: canonical mismatch {can} vs {url}")
+        # Ensure consistent full-screen navigation on every public canonical page.
+        required_menu = (
+            'id="site-menu-toggle"',
+            'id="site-menu"',
+            'class="language-picker"',
+            'href="/assets/fullscreen-menu.css"',
+            'src="/assets/menu-2026.js"',
+            "<noscript>",
+        )
+        for fragment in required_menu:
+            if fragment not in source:
+                errors.append(f"{file}: missing menu integration: {fragment}")
+        if 'class="main-nav"' in source:
+            errors.append(f"{file}: old horizontal navigation still present")
+        if source.count('id="site-menu"') != 1 or source.count('id="site-menu-toggle"') != 1:
+            errors.append(f"{file}: duplicated or missing menu IDs")
+        if 'aria-controls="site-menu"' not in source or 'aria-expanded="false"' not in source:
+            errors.append(f"{file}: menu toggle lacks accessible state")
         if not doc.jsonld:
             errors.append(f"{file}: missing structured data")
         for script in doc.jsonld:
