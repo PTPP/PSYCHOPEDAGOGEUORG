@@ -16,3 +16,5 @@ jobs:
           python-version: "3.12"
       - name: Validate sitemap, metadata and internal links
         run: python tools/validate_site.py
+      - name: Validate full-screen menu JavaScript syntax
+        run: node --check assets/menu-2026.js
