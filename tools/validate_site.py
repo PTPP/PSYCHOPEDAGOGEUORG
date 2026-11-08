@@ -137,12 +137,22 @@ def check():
             # The biographies must be the complete source text, not previews.
             import re
             cards = re.findall(r'<article class="team-card">(.*?)</article>', source, flags=re.S)
-            if len(cards) != 8:
-                errors.append(f"{file}: expected 8 public specialist cards")
+            if len(cards) != 12:
+                errors.append(f"{file}: expected 8 specialist and 4 administration cards")
+            admin_start = source.find('class="team-grid admin-grid"')
+            admin_end = source.find("</section>", admin_start) if admin_start >= 0 else -1
+            admin_part = source[admin_start:admin_end] if admin_end >= 0 else ""
+            if admin_part.count('<article class="team-card">') != 4:
+                errors.append(f"{file}: expected 4 administration cards")
+            for person in ("Beata Zomer", "Agnieszka Sieg-Trafalska", "Barbara Oleksiak", "Krzysztof Oleksiak"):
+                if person not in admin_part:
+                    errors.append(f"{file}: missing administration profile for {person}")
             for i, card in enumerate(cards, 1):
                 match = re.search(r'<div class="bio">(.*?)</div>', card, flags=re.S)
                 if not match or "..." in match.group(1) or len(match.group(1)) < 150:
                     errors.append(f"{file}: incomplete biography in card #{i}")
+                if not re.search(r'<img class="team-photo" src="/[^"]+"', card):
+                    errors.append(f"{file}: missing profile photograph in card #{i}")
         if file in [ROOT / "index.html", ROOT / "en/index.html", ROOT / "cennik/index.html", ROOT / "en/pricing/index.html"]:
             count = source.count('class="service-row"')
             if count != 25:
