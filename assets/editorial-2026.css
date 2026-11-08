@@ -22,3 +22,16 @@
   .team-card .bio{font-size:15px;line-height:1.7}
   .team-card .bio p{margin-bottom:13px}
 }
+
+/* Administration team profiles share the full accessible card pattern. */
+.team-support .admin-grid{margin-top:30px}
+.team-support .admin-grid .team-card{min-width:0}
+.team-support .admin-grid .team-card h4{font:400 24px/1.18 var(--serif);margin:18px 0 6px;overflow-wrap:break-word;hyphens:auto}
+.team-support .admin-grid .team-card .bio{font-size:14px;line-height:1.72}
+.team-support .admin-grid .team-card .bio p{margin:0 0 12px}
+.team-support .admin-grid .team-card .bio p:last-child{margin-bottom:0}
+@media(max-width:680px){
+  .team-support .admin-grid{margin-top:24px}
+  .team-support .admin-grid .team-card h4{font-size:clamp(26px,6vw,34px);line-height:1.2;margin:19px 0 9px}
+  .team-support .admin-grid .team-card .bio{font-size:15px;line-height:1.7}
+}
