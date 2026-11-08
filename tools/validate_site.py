@@ -136,11 +136,11 @@ def check():
         if file in [ROOT / "index.html", ROOT / "en/index.html"]:
             # The biographies must be the complete source text, not previews.
             import re
-            cards = re.findall(r'<article class="team-card">([\\s\\S]*?)</article>', source)
+            cards = re.findall(r'<article class="team-card">(.*?)</article>', source, flags=re.S)
             if len(cards) != 8:
                 errors.append(f"{file}: expected 8 public specialist cards")
             for i, card in enumerate(cards, 1):
-                match = re.search(r'<div class="bio">([\\s\\S]*?)</div>', card)
+                match = re.search(r'<div class="bio">(.*?)</div>', card, flags=re.S)
                 if not match or "..." in match.group(1) or len(match.group(1)) < 150:
                     errors.append(f"{file}: incomplete biography in card #{i}")
         if file in [ROOT / "index.html", ROOT / "en/index.html", ROOT / "cennik/index.html", ROOT / "en/pricing/index.html"]:
