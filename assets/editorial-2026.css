@@ -6,3 +6,19 @@
 
 /* Long-form legal text: faithful content, visually aligned with the editorial site */
 .legal-content{max-width:910px;font-size:15px;line-height:1.82}.legal-content section{border-top:1px solid var(--line);padding:26px 0}.legal-content section h2{font:400 34px/1.18 var(--serif);letter-spacing:-.026em;margin:0 0 21px}.legal-content h3{font:400 24px/1.25 var(--serif);margin:23px 0 14px}.legal-content p{margin:0 0 17px}.legal-content ul,.legal-content ol{padding-left:24px;margin:12px 0 20px}.legal-content li{margin:8px 0}.legal-content .alert-box{border-left:3px solid var(--rust);padding:17px 23px;background:var(--paper2);margin:20px 0 26px}.legal-content a{color:var(--green);font-weight:650}.detail-page .detail-hero{margin-bottom:42px}.detail-page .detail-hero .subtitle{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:var(--rust)}.detail-page .detail-hero .meta{font-size:13px;color:var(--muted)}.detail-page .detail-hero h1{font:400 clamp(45px,6vw,76px)/1.08 var(--serif)}@media(max-width:650px){.legal-content section h2{font-size:29px}}
+/* Full specialist biographies — keep text legible, with no excerpt clipping. */
+.team-card .bio{font-size:14px;line-height:1.72;color:var(--muted);white-space:normal;overflow:visible;display:block;overflow-wrap:break-word}
+.team-card .bio p{margin:0 0 12px}
+.team-card .bio p:last-child{margin-bottom:0}
+.team-card h3{overflow-wrap:break-word;hyphens:auto}
+.team-card .role{font-size:12px;line-height:1.55}
+@media(max-width:1050px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 24px}}
+@media(max-width:680px){
+  .team-grid{grid-template-columns:minmax(0,1fr);gap:42px}
+  .team-card{min-width:0;border-bottom:1px solid var(--line);padding-bottom:30px}
+  .team-card .team-photo{aspect-ratio:5/4;max-height:330px;object-fit:cover;object-position:center 18%}
+  .team-card h3{font-size:clamp(26px,6vw,34px);line-height:1.2;margin:19px 0 9px}
+  .team-card .role{font-size:12px;line-height:1.6;margin-bottom:14px}
+  .team-card .bio{font-size:15px;line-height:1.7}
+  .team-card .bio p{margin-bottom:13px}
+}
