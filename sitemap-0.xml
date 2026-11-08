@@ -16,30 +16,100 @@
   </url>
   <url>
     <loc>https://www.psychopedagog.org/cennik/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/cennik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/cennik/"/>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/en/pricing/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/cennik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/cennik/"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/diagnostyka-adhd/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/diagnostyka-adhd/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/adhd-assessment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/diagnostyka-adhd/"/>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/en/adhd-assessment/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/diagnostyka-adhd/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/adhd-assessment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/diagnostyka-adhd/"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/counselling-boleslawiec/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/counselling-boleslawiec/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/counselling/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/counselling-boleslawiec/"/>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/en/counselling/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/counselling-boleslawiec/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/counselling/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/counselling-boleslawiec/"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/wsparcie-dzieci-i-mlodziezy/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/wsparcie-dzieci-i-mlodziezy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/child-and-teen-support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/wsparcie-dzieci-i-mlodziezy/"/>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/en/child-and-teen-support/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/wsparcie-dzieci-i-mlodziezy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/child-and-teen-support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/wsparcie-dzieci-i-mlodziezy/"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/kurs-kompetencji-rodzicielskich/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/kurs-kompetencji-rodzicielskich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/parenting-course/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/kurs-kompetencji-rodzicielskich/"/>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/en/parenting-course/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/kurs-kompetencji-rodzicielskich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/parenting-course/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/kurs-kompetencji-rodzicielskich/"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/opinie-zaswiadczenia/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/opinie-zaswiadczenia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/reports-and-certificates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/opinie-zaswiadczenia/"/>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/en/reports-and-certificates/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/opinie-zaswiadczenia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/reports-and-certificates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/opinie-zaswiadczenia/"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/dla-instytucji/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/dla-instytucji/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/institutional-referrals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/dla-instytucji/"/>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/en/institutional-referrals/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/dla-instytucji/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/institutional-referrals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/dla-instytucji/"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
