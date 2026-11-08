@@ -133,6 +133,16 @@ def check():
             target = url_to_file(urlsplit(uri).path)
             if not target.exists():
                 errors.append(f"{file}: broken internal URL {uri}")
+        if file in [ROOT / "index.html", ROOT / "en/index.html"]:
+            # The biographies must be the complete source text, not previews.
+            import re
+            cards = re.findall(r'<article class="team-card">([\\s\\S]*?)</article>', source)
+            if len(cards) != 8:
+                errors.append(f"{file}: expected 8 public specialist cards")
+            for i, card in enumerate(cards, 1):
+                match = re.search(r'<div class="bio">([\\s\\S]*?)</div>', card)
+                if not match or "..." in match.group(1) or len(match.group(1)) < 150:
+                    errors.append(f"{file}: incomplete biography in card #{i}")
         if file in [ROOT / "index.html", ROOT / "en/index.html", ROOT / "cennik/index.html", ROOT / "en/pricing/index.html"]:
             count = source.count('class="service-row"')
             if count != 25:
