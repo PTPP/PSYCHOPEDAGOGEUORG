@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.psychopedagog.org/</loc>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/"/>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
-    <loc>https://www.psychopedagog.org/#uslugi-cennik</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.psychopedagog.org/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://www.psychopedagog.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.psychopedagog.org/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.psychopedagog.org/"/>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
-    <loc>https://www.psychopedagog.org/#specjalisci</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.psychopedagog.org/cennik/</loc>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
-    <loc>https://www.psychopedagog.org/#faq</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.psychopedagog.org/diagnostyka-adhd/</loc>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
-    <loc>https://www.psychopedagog.org/#kontakt</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.psychopedagog.org/counselling-boleslawiec/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/wsparcie-dzieci-i-mlodziezy/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/kurs-kompetencji-rodzicielskich/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/opinie-zaswiadczenia/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.psychopedagog.org/dla-instytucji/</loc>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/regulamin/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.psychopedagog.org/polityka-prywatnosci/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
